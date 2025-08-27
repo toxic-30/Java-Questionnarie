@@ -1,0 +1,20 @@
+481. What is Aspect-Oriented Programming (AOP)?
+482. Difference between OOP and AOP.
+483. What is a join point in Spring AOP?
+484. What is a pointcut in Spring AOP?
+485. What is advice in Spring AOP? Types of advice?
+486. Explain @Before, @After, @Around, @AfterReturning, @AfterThrowing.
+487. Difference between proxy-based AOP and AspectJ.
+488. How to configure AOP using annotations?
+489. How to implement logging using Spring AOP?
+490. What are aspects in Spring?
+491. How does Spring Security work in a Spring Boot application?
+492. Difference between authentication and authorization.
+493. What is UserDetails and UserDetailsService?
+494. What are security filters in Spring Security?
+495. How to secure REST APIs with Spring Security?
+496. Difference between basic auth, JWT, and OAuth2 in Spring Security.
+497. How to implement role-based access control in Spring Boot?
+498. How to write unit tests for Spring Boot controllers (@WebMvcTest)?
+499. How to write integration tests for Spring Boot applications (@SpringBootTest)?
+500. How to mock dependencies in Spring Boot using @MockBean?

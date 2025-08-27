@@ -1,0 +1,50 @@
+What is Hibernate and why is it used?
+352. Difference between Hibernate and JDBC.
+353. What is ORM (Object-Relational Mapping)?
+354. Explain Hibernate architecture.
+355. What are the main interfaces in Hibernate (Session, SessionFactory, Transaction)?
+356. Difference between save(), persist(), saveOrUpdate(), and merge().
+357. Difference between get() and load() in Hibernate.
+358. Explain the difference between flush() and commit().
+359. What is the first-level cache in Hibernate?
+360. What is the second-level cache in Hibernate?
+361. Difference between first-level cache and second-level cache.
+362. What is a Query Cache in Hibernate?
+363. Difference between HQL and SQL in Hibernate.
+364. Explain Criteria API in Hibernate.
+365. What is lazy loading?
+366. What is eager fetching?
+367. How does FetchType.LAZY differ from FetchType.EAGER?
+368. What is the difference between @OneToOne, @OneToMany, @ManyToOne, and @ManyToMany annotations?
+369. How do you map a composite primary key in Hibernate?
+370. Difference between entity and value object in Hibernate.
+371. What is JPA (Java Persistence API)?
+372. Difference between JPA and Hibernate.
+373. Explain the EntityManager interface in JPA.
+374. Difference between EntityManager persist() and merge().
+375. What is the difference between @Entity and @Table annotations?
+376. Explain @Id and @GeneratedValue.
+377. What are @Column attributes like nullable, unique, length?
+378. Difference between @OneToOne mapping using mappedBy vs owning side.
+379. How to implement bidirectional associations in JPA?
+380. Difference between unidirectional and bidirectional associations.
+381. Explain the @JoinColumn annotation.
+382. What is a cascading operation in Hibernate?
+383. Difference between CascadeType.ALL and specific cascade types (PERSIST, MERGE, REMOVE).
+384. What is the difference between session.evict() and session.clear()?
+385. How do you handle optimistic locking in Hibernate?
+386. How do you handle pessimistic locking in Hibernate?
+387. What is the difference between transient, persistent, and detached objects?
+388. What is the difference between @Temporal(TemporalType.DATE/TIME/TIMESTAMP)?
+389. Difference between @Embedded and @Embeddable.
+390. How do you implement inheritance mapping in Hibernate?
+391. What are the inheritance strategies (SINGLE_TABLE, TABLE_PER_CLASS, JOINED)?
+392. Explain Hibernate interceptors.
+393. What are Hibernate event listeners?
+394. Difference between HQL and JPQL.
+395. How to execute native SQL queries in Hibernate?
+396. Difference between createQuery() and createNativeQuery().
+397. Explain batching in Hibernate.
+398. Difference between flush() and clear() in Session.
+399. How does Hibernate handle transactions internally?
+400. What are best practices for performance optimization in Hibernate?

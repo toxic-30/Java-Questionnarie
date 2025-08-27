@@ -1,0 +1,49 @@
+What is an exception in Java?
+
+Difference between error and exception.
+
+Difference between checked and unchecked exceptions.
+
+Give examples of checked exceptions.
+
+Give examples of unchecked exceptions.
+
+What is the parent class of all exceptions?
+
+What is the difference between Throwable, Error, and Exception?
+
+What is RuntimeException?
+
+What happens if an exception is not handled in Java?
+
+What is the difference between throw and throws?
+
+Can a constructor throw exceptions?
+
+Can a static block throw exceptions?
+
+Can a finally block throw an exception?
+
+Difference between final, finally, and finalize().
+
+What is the purpose of try-catch-finally block?
+
+Can we have a try block without catch?
+
+Can we have multiple catch blocks?
+
+Order of multiple catch blocks.
+
+What is multi-catch in Java 7?
+
+What is try-with-resources in Java 7?
+
+What is the AutoCloseable interface?
+
+Difference between try-with-resources and finally block.
+
+Can we catch multiple exceptions in one catch block?
+
+Can we rethrow an exception in Java?
+
+What is exception chaining?

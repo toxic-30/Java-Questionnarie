@@ -1,0 +1,70 @@
+Difference between List, Set, and Map.
+How does HashMap work internally?
+What is hashCode() and equals() contract?
+How does LinkedHashMap maintain insertion order?
+Difference between HashMap and TreeMap.
+What is the load factor in HashMap?
+Difference between HashMap and ConcurrentHashMap.
+Can HashMap have null keys?
+Difference between fail-fast and fail-safe iterators.
+What is the difference between Iterator and ListIterator?
+Can we modify a collection while iterating?
+What is CopyOnWriteArrayList?
+Difference between ArrayList and LinkedList.
+Difference between HashSet and TreeSet.
+What is EnumSet?
+What is IdentityHashMap?
+What are WeakHashMap and its use cases?
+Difference between Hashtable and HashMap.
+Why Hashtable is considered legacy?
+Difference between PriorityQueue and ArrayDeque.
+What is a BlockingQueue?
+What is ConcurrentSkipListMap?
+Difference between Comparable and Comparator.
+Can we sort HashMap by values?
+What is the difference between Collections.synchronizedList() and CopyOnWriteArrayList?
+What are generics in Java?
+Advantages of using generics.
+What is type erasure in generics?
+Difference between bounded and unbounded generics.
+Can we use primitive types in generics? Why not?
+What are wildcards in generics?
+Difference between ? extends and ? super.
+What is PECS (Producer Extends Consumer Super)?
+Can we overload a generic method?
+Can we create generic arrays?
+What is a generic constructor?
+Can we define a static generic method?
+What is type inference in generics?
+Difference between raw types and parameterized types.
+Can generics be used with exceptions?
+What is a reifiable type?
+Why generics are implemented using type erasure?
+Can generic classes extend other generic classes?
+Can you create generic enums?
+What is bridge method in generics?
+Difference between Class<T> and Class<?>.
+Can you use reflection with generics?
+How do generics affect bytecode?
+What is Diamond Operator (<>)?
+How does Collections.sort() work internally?
+What is binary search in collections?
+Difference between synchronized collections and concurrent collections.
+What are immutable collections in Java?
+Difference between Arrays.asList() and List.of().
+Can we modify a List returned by Arrays.asList()?
+Difference between Arrays.copyOf() and System.arraycopy().
+What is Spliterator?
+Difference between Enumeration and Iterator.
+Why Enumeration is legacy?
+What is ConcurrentModificationException?
+How to avoid ConcurrentModificationException?
+What are NavigableMap and NavigableSet?
+What is TreeMap and how does it store data?
+Difference between HashSet and LinkedHashSet.
+What is the default capacity of HashMap and ArrayList?
+What is modCount in ArrayList?
+How does resizing happen in ArrayList?
+How does resizing happen in HashMap?
+What is the difference between remove() in Iterator vs Collection?
+Explain identity vs equality in collections.
