@@ -1,0 +1,15 @@
+Difference between synchronous REST API calls and asynchronous messaging.
+What is message broker? Examples.
+How to integrate Kafka/RabbitMQ with Spring Boot microservices?
+What is event-driven microservices architecture?
+How to implement pub/sub pattern in microservices?
+What is eventual consistency and Saga pattern?
+Difference between Saga choreography and orchestration.
+How do you handle transactions across multiple services?
+What is distributed tracing?
+How to implement tracing using Sleuth and Zipkin?
+What is API versioning in microservices?
+How do you handle backward compatibility of APIs?
+Difference between synchronous and asynchronous error handling.
+How to implement retry mechanism in Spring Boot microservices?
+What is idempotency and why is it important in microservices?
