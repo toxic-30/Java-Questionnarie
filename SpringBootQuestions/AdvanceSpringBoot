@@ -1,0 +1,73 @@
+1. Actuator & Monitoring 
+What is Spring Boot Actuator and why is it used?
+How do you enable Spring Boot Actuator endpoints?
+Explain /actuator/health and its usage.
+What is /actuator/metrics used for?
+How do you create custom Actuator endpoints?
+How to expose only specific Actuator endpoints?
+How to secure Actuator endpoints in production?
+What is Micrometer and how does it integrate with Spring Boot?
+How to export metrics to Prometheus using Spring Boot?
+Difference between built-in metrics and custom metrics in Spring Boot.
+
+2. Configuration & Profiles
+How do you define multiple profiles in Spring Boot?
+Difference between @Value and @ConfigurationProperties.
+How to activate a specific profile at runtime?
+How to create environment-specific configuration files?
+How to override configuration properties using environment variables?
+Difference between application.properties and application.yml.
+How to bind nested properties using @ConfigurationProperties.
+How to use default values in @Value annotations?
+How to validate configuration properties?
+How to dynamically reload configuration without restarting the application?
+
+3. Transactions & Data Access 
+What is the @Transactional annotation and how does it work?
+Difference between propagation types in Spring transactions.
+Difference between isolation levels in Spring transactions.
+How to handle nested transactions?
+Difference between programmatic and declarative transactions.
+What happens when a runtime exception occurs inside a transaction?
+What happens when a checked exception occurs inside a transaction?
+How to rollback transactions manually?
+Difference between @Transactional(readOnly = true) and default transaction.
+How does Spring manage transactions internally?
+
+4. Caching 
+How to enable caching in Spring Boot?
+Difference between @Cacheable, @CachePut, and @CacheEvict.
+How to use multiple caches in Spring Boot?
+How to configure TTL (time-to-live) for caches?
+Difference between in-memory cache and distributed cache.
+How to integrate Redis or Ehcache with Spring Boot caching?
+How to evict all cache entries programmatically?
+How to cache method results conditionally?
+Difference between synchronous and asynchronous caching.
+How does cache key generation work in Spring Boot?
+
+5. Security 
+How to implement JWT-based authentication in Spring Boot?
+Difference between Basic Auth, JWT, and OAuth2 in Spring Boot.
+How to implement OAuth2 login with Spring Security?
+How to secure REST endpoints with role-based access?
+What is the difference between method-level and URL-level security?
+How to implement @PreAuthorize and @PostAuthorize?
+How to configure CORS in Spring Boot security?
+Difference between stateless and stateful security.
+How to customize Spring Security login and error pages?
+How to implement refresh tokens with JWT?
+
+6. Messaging & Asynchronous Processing 
+How to use @Async in Spring Boot?
+Difference between synchronous and asynchronous execution.
+How to handle exceptions in asynchronous methods?
+How to integrate Spring Boot with RabbitMQ or Kafka?
+What is ApplicationEventPublisher and how to publish custom events?
+
+7. Advanced Testing
+Difference between @WebMvcTest and @SpringBootTest.
+How to mock dependencies using @MockBean.
+How to write integration tests with embedded H2 database?
+How to use Testcontainers for real database testing?
+How to test REST APIs with MockMvc and TestRestTemplate?
