@@ -1,7 +1,11 @@
 Difference between List, Set, and Map.
 How does HashMap work internally?
 What is hashCode() and equals() contract?
+-> The contract is -
+1. If 2 objects  are equal, that means there hashcode will always be same
+2. If 2 objects has same hashcode, that doesnot mean they will always be  equal.
 How does LinkedHashMap maintain insertion order?
+-> 
 Difference between HashMap and TreeMap.
 What is the load factor in HashMap?
 Difference between HashMap and ConcurrentHashMap.
