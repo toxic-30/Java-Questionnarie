@@ -1,159 +1,80 @@
 What are the main principles of Object-Oriented Programming?
-
 Difference between == and .equals() in Java?
-
 Can you override a static method in Java? Why/why not?
-
 Explain constructor overloading vs method overloading.
-
 What is method overriding and rules for overriding in Java?
-
 Difference between final, finally, and finalize().
-
 What is the difference between abstract class and interface?
-
 Can an abstract class have a constructor?
-
 Explain the super keyword and its use cases.
-
 Can we declare a class as both abstract and final? Why not?
-
 What happens if you don’t provide a constructor in a class?
-
 Difference between stack and heap memory in Java.
-
 What is the default value of local variables in Java?
-
 Explain pass by value vs pass by reference in Java.
-
 What is the use of this keyword?
-
 Difference between shallow copy and deep copy in Java.
-
 Can you create an immutable class? How?
-
 What is a marker interface? Give examples.
-
 What is the difference between String, StringBuilder, and StringBuffer?
-
 Why are strings immutable in Java?
-
 What are wrapper classes in Java?
-
 Difference between primitive types and reference types.
-
 What is autoboxing and unboxing?
-
 Explain Java memory model.
-
 Can main() be overloaded in Java?
-
 What happens if we make main() non-static?
-
 What is a static block? When is it executed?
-
 Difference between static variable and instance variable.
-
 What are default methods in interfaces?
-
 What is multiple inheritance and why is it not supported?
-
 How do interfaces achieve multiple inheritance?
-
 What is the difference between abstract methods and default methods?
-
 Can we declare an interface method as private?
-
 Explain covariant return types.
-
 Can you override a private method?
-
 What is a transient variable in Java?
-
 Difference between volatile and transient keywords.
-
 What is the use of strictfp keyword?
-
 Explain the lifecycle of an object in Java.
-
 Can constructors be synchronized?
-
 What is object cloning in Java?
-
 How do you prevent object cloning?
-
 Difference between deep copy and shallow copy in cloning.
-
 What is an inner class? Types of inner classes.
-
 Difference between static nested class and inner class.
-
 Can we define an interface inside a class?
-
 Explain local inner classes.
-
 What is an anonymous inner class?
-
 What is a functional interface?
-
 Difference between checked and unchecked exceptions.
-
 Can we catch multiple exceptions in a single catch block?
-
 Difference between throw and throws.
-
 What is try-with-resources in Java?
-
 Can we write multiple finally blocks?
-
 Difference between error and exception.
-
 Can we rethrow an exception?
-
 Explain custom exceptions in Java.
-
 What happens if finally block has return statement?
-
 Can a constructor throw an exception?
-
 Difference between compile-time error and runtime error.
-
 What is the default exception handler in Java?
-
 Explain NoClassDefFoundError vs ClassNotFoundException.
-
 Explain OutOfMemoryError and how to fix it.
-
 Difference between checked exception and runtime exception.
-
 What is the difference between throw new Exception() and throw new RuntimeException()?
-
 Can we create our own Error class?
-
 How does garbage collection work in Java?
-
 What are different GC algorithms in Java?
-
 Difference between System.gc() and Runtime.gc().
-
 Can we force garbage collection in Java?
-
 What is finalize() and when is it called?
-
 Why is finalize() not recommended?
-
 Difference between strong, weak, soft, and phantom references.
-
 Explain memory leaks in Java.
-
 What are memory pools in JVM?
-
 Difference between JDK, JRE, and JVM.
-
 Explain Just-In-Time (JIT) compiler.
-
 What are classloaders in Java?
-
 What is the difference between bootstrap, extension, and application classloader?
-
 Explain parent delegation model in classloading.
