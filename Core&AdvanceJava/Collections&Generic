@@ -1,22 +1,62 @@
 Difference between List, Set, and Map.
+-> List - An ordered collection (sequence) that allows duplicate elements.Ex: ArrayList, LinkedList, Vector, Stack.
+Key Points: Maintains insertion order. Elements can be accessed by index (position). Allows duplicates. Can contain multiple null values.
+Use case: When you need to preserve order, allow duplicates, and access elements by index.
+Set - A collection that does not allow duplicate elements. Ex- HashSet, LinkedHashSet, TreeSet.
+Key Points: No duplicates allowed.Order depends on implementation.HashSet → No guaranteed order.LinkedHashSet → Maintains insertion order.TreeSet → Sorted order.
+Allows at most one null element (except TreeSet where null not allowed).
+Use case: When you want uniqueness of elements.
+Map - A key-value pair collection where keys are unique but values can be duplicate.Ex - HashMap, LinkedHashMap, TreeMap, ConcurrentHashMap.
+Key Points: Stores (key → value) mappings.Keys must be unique.Values can be duplicate.Allows one null key (in HashMap, LinkedHashMap) and multiple null values.
+Use case: When you need to map unique identifiers (keys) to values.
 How does HashMap work internally?
+
 What is hashCode() and equals() contract?
 -> The contract is -
 1. If 2 objects  are equal, that means there hashcode will always be same
 2. If 2 objects has same hashcode, that doesnot mean they will always be  equal.
 How does LinkedHashMap maintain insertion order?
--> 
+-> LinkedHashMap maintain insertion order because it uses doubly linkedlist to store the object into array bucket.
+
 Difference between HashMap and TreeMap.
+-> HashMap Does not guarantee any order of keys (neither insertion nor sorting). 1 null key allowed, multiple null values allowed.
+Uses hash table (array + linked list / red-black tree after collisions). 
+TC - get(), put(), remove() → O(1) average (hashing). Worst case (all keys collide into one bucket) → O(n), but very rare after Java 8 (because buckets use a tree when collisions exceed threshold).
+Use case: Best when you care about fast lookups and order doesn’t matter.
+TreeMap - Maintains sorted order of keys (natural order or custom Comparator). Based on self-balancing binary search tree (Red-Black Tree).
+Null key NOT allowed (throws NullPointerException)but Null values allowed.
+TC : get(), put(), remove() → O(log n) (because internally it’s a Red-Black Tree).
+Use case - When you need sorted keys (like dictionary, leaderboard, or range queries).
+
 What is the load factor in HashMap?
+-> Load factor is the maximum capacity of hashmap before it expands, by default load factor of hashMap is 0.75.
+Default size of hashmap is 16, so 16*0.75 = 12, means hashmap resize will take place on the insertion of 13th element.
 Difference between HashMap and ConcurrentHashMap.
+-> 
 Can HashMap have null keys?
+-> Yes, only 1 null key 
 Difference between fail-fast and fail-safe iterators.
+-> Fail-Fast Iterators - Iterators that throw a ConcurrentModificationException if the collection is structurally modified 
+(add/remove) after the iterator is created (except through the iterator’s own methods like remove()).
+Fail-Safe Iterators - Iterators that do not throw ConcurrentModificationException even if the collection is modified while iterating.
 What is the difference between Iterator and ListIterator?
+-> Iterator works for all collection types, Only forward traversal, can only remove element 
+   ListIterator works only for list, supports bidirectional traversal, allows (add, set, remove) along with index access.
 Can we modify a collection while iterating?
+-> Yes we can modify a collection while iterating it only through iterator's own method. 
 What is CopyOnWriteArrayList?
+-> 
 Difference between ArrayList and LinkedList.
+-> ArrayList utilizes array for storing the data, it store data in contiguous memory so whenever we want to insert any element 
+(not in start or end), we need to shift the elements of the array, and the time complexity is O(n) and in case of access any 
+element randomly, we just need to provide the index and it will take O(1).
+	LinkedList stores the element in separate node which are linked together with the help of references, so whenever we are 
+modifying the list, we store the data in a node and linked together with reference without shifting the nodes. 
+So, it takes O(1) time complexity but in case of access any element randomly, we need to traverse the entire linkedlist 
+and it will take O(n).
 Difference between HashSet and TreeSet.
 What is EnumSet?
+
 What is IdentityHashMap?
 What are WeakHashMap and its use cases?
 Difference between Hashtable and HashMap.
