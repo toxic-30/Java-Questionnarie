@@ -44,17 +44,25 @@ What is the difference between Iterator and ListIterator?
    ListIterator works only for list, supports bidirectional traversal, allows (add, set, remove) along with index access.
 Can we modify a collection while iterating?
 -> Yes we can modify a collection while iterating it only through iterator's own method. 
+
 What is CopyOnWriteArrayList?
--> 
+-> CopyOnWriteArrayList is a thread-safe variant of ArrayList in Java that is part of the java.util.concurrent package.
+It implements the Copy-On-Write strategy, meaning every time you modify the list (add, remove, update), 
+it creates a new copy of the underlying array instead of modifying it directly.
+It is ideal when reads are frequent and writes are rare, ensuring thread-safe iteration without locks.
+
 Difference between ArrayList and LinkedList.
 -> ArrayList utilizes array for storing the data, it store data in contiguous memory so whenever we want to insert any element 
 (not in start or end), we need to shift the elements of the array, and the time complexity is O(n) and in case of access any 
 element randomly, we just need to provide the index and it will take O(1).
-	LinkedList stores the element in separate node which are linked together with the help of references, so whenever we are 
+LinkedList stores the element in separate node which are linked together with the help of references, so whenever we are 
 modifying the list, we store the data in a node and linked together with reference without shifting the nodes. 
 So, it takes O(1) time complexity but in case of access any element randomly, we need to traverse the entire linkedlist 
 and it will take O(n).
+
 Difference between HashSet and TreeSet.
+
+
 What is EnumSet?
 
 What is IdentityHashMap?
