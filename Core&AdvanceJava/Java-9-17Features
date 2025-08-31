@@ -1,50 +1,50 @@
-301. Difference between byte streams and character streams in Java I/O.
-302. What is the role of InputStream and OutputStream?
-303. Explain the difference between FileReader and FileInputStream.
-304. What are BufferedReader and BufferedWriter used for?
-305. What is the advantage of using BufferedInputStream?
-306. How does ObjectInputStream and ObjectOutputStream work?
-307. Explain the concept of RandomAccessFile.
-308. What is Java NIO? How does it differ from I/O streams?
-309. What are channels in NIO?
-310. What is the role of ByteBuffer in NIO?
-311. Explain memory-mapped files in NIO.
-312. What is the difference between blocking and non-blocking I/O in Java?
-313. What are selectors in Java NIO?
-314. How does file locking work in Java NIO?
-315. When would you prefer NIO over traditional I/O?
-316. What is Java Reflection API?
-317. How do you create an instance of a class dynamically using reflection?
-318. How can you access private fields and methods using reflection?
-319. What is the role of Class.forName()?
-320. Explain Method, Constructor, and Field classes in reflection.
-321. What are annotations in Java?
-322. Difference between built-in and custom annotations.
-323. How do you create a custom annotation?
-324. What is the purpose of @Retention and @Target meta-annotations?
-325. Explain the difference between SOURCE, CLASS, and RUNTIME retention policies.
-326. What is Java serialization?
-327. What is the role of serialVersionUID?
-328. What happens if serialVersionUID is not declared?
-329. How do you prevent a field from being serialized?
-330. Can a class be serialized if it contains a reference to a non-serializable object?
-331. What is the difference between Serializable and Externalizable?
-332. How does transient keyword work with serialization?
-333. Can you customize serialization in Java?
-334. Explain the role of readObject() and writeObject() methods.
-335. What are some security risks with serialization?
-336. What are design patterns? Why are they important in Java?
-337. Explain the Singleton pattern. How can you implement it in Java?
-338. What is the Factory Method pattern?
-339. Explain the Abstract Factory pattern with an example.
-340. What is the Builder pattern? When do you use it?
-341. Explain the Prototype pattern.
-342. What is the Adapter design pattern?
-343. Explain the Observer pattern with a real-life Java example.
-344. What is the Decorator design pattern?
-345. Explain the Proxy design pattern in Java.
-346. What is the Java Module System (introduced in Java 9)?
-347. Explain the concept of var keyword in Java 10.
-348. What are records in Java 14?
-349. What are sealed classes in Java 17?
-350. What are switch expressions introduced in Java 12?
+1. Difference between byte streams and character streams in Java I/O.
+2. What is the role of InputStream and OutputStream?
+3. Explain the difference between FileReader and FileInputStream.
+4. What are BufferedReader and BufferedWriter used for?
+5. What is the advantage of using BufferedInputStream?
+6. How does ObjectInputStream and ObjectOutputStream work?
+7. Explain the concept of RandomAccessFile.
+8. What is Java NIO? How does it differ from I/O streams?
+9. What are channels in NIO?
+10. What is the role of ByteBuffer in NIO?
+11. Explain memory-mapped files in NIO.
+12. What is the difference between blocking and non-blocking I/O in Java?
+12. What are selectors in Java NIO?
+13. How does file locking work in Java NIO?
+14. When would you prefer NIO over traditional I/O?
+15. What is Java Reflection API?
+16. How do you create an instance of a class dynamically using reflection?
+17. How can you access private fields and methods using reflection?
+18. What is the role of Class.forName()?
+19. Explain Method, Constructor, and Field classes in reflection.
+20. What are annotations in Java?
+21. Difference between built-in and custom annotations.
+22. How do you create a custom annotation?
+23. What is the purpose of @Retention and @Target meta-annotations?
+24. Explain the difference between SOURCE, CLASS, and RUNTIME retention policies.
+25. What is Java serialization?
+26. What is the role of serialVersionUID?
+27. What happens if serialVersionUID is not declared?
+28. How do you prevent a field from being serialized?
+29. Can a class be serialized if it contains a reference to a non-serializable object?
+30. What is the difference between Serializable and Externalizable?
+31. How does transient keyword work with serialization?
+32. Can you customize serialization in Java?
+33. Explain the role of readObject() and writeObject() methods.
+34. What are some security risks with serialization?
+35. What are design patterns? Why are they important in Java?
+36. Explain the Singleton pattern. How can you implement it in Java?
+37. What is the Factory Method pattern?
+38. Explain the Abstract Factory pattern with an example.
+39. What is the Builder pattern? When do you use it?
+40. Explain the Prototype pattern.
+41. What is the Adapter design pattern?
+42. Explain the Observer pattern with a real-life Java example.
+43. What is the Decorator design pattern?
+44. Explain the Proxy design pattern in Java.
+45. What is the Java Module System (introduced in Java 9)?
+46. Explain the concept of var keyword in Java 10.
+47. What are records in Java 14?
+48. What are sealed classes in Java 17?
+49. What are switch expressions introduced in Java 12?

@@ -1,50 +1,50 @@
-What are the new features introduced in Java 8?
-What is a lambda expression?
-Syntax of lambda expression in Java?
-Difference between lambda expression and anonymous class.
-What is a functional interface?
-Give examples of built-in functional interfaces in Java 8.
-What is the @FunctionalInterface annotation?
-Explain Predicate<T> functional interface.
-Explain Function<T, R> functional interface.
-Explain Supplier<T> functional interface.
-Explain Consumer<T> functional interface.
-What is the difference between Predicate and Function?
-What is method reference in Java 8?
-Types of method references in Java 8.
-Difference between static method reference and instance method reference.
-What are streams in Java 8?
-Difference between intermediate and terminal operations in streams.
-What are short-circuiting operations in streams?
-Difference between map() and flatMap().
-What is the difference between forEach() and forEachOrdered()?
-Difference between findFirst() and findAny().
-What is the difference between sequential streams and parallel streams?
-When should you use parallel streams?
-What is Collectors.toList() in streams?
-How to perform groupingBy in streams?
-What is partitioningBy in streams?
-Difference between reduce() and collect().
-Can streams be reused once consumed?
-Difference between lazy evaluation and eager evaluation in streams.
-What is Optional in Java 8?
-Why was Optional introduced in Java?
-Difference between Optional.of(), Optional.ofNullable(), and Optional.empty().
-What is orElse() vs orElseGet() in Optional?
-What is orElseThrow() in Optional?
-How do you chain Optionals?
-Can Optional be serialized?
-Why is Optional not Serializable by default?
-What is the difference between Stream API and Iterator?
-What is the difference between map-reduce in Java 8 vs Hadoop?
-What are default methods in interfaces?
-What are static methods in interfaces?
-Difference between default methods and abstract methods.
-Can default methods be overridden in implementing class?
-What is Nashorn in Java 8?
-What is the difference between Predicate chaining using and() and or()?
-What is the peek() method in streams?
-What is distinct() in streams?
-How does limit() and skip() work in streams?
-What is the difference between sorted() with comparator vs natural order?
-Explain the concept of effectively final in Java 8.
+1. What are the new features introduced in Java 8?
+2. What is a lambda expression?
+3. Syntax of lambda expression in Java?
+4. Difference between lambda expression and anonymous class.
+5. What is a functional interface?
+6. Give examples of built-in functional interfaces in Java 8.
+7. What is the @FunctionalInterface annotation?
+8. Explain Predicate<T> functional interface.
+9. Explain Function<T, R> functional interface.
+10. Explain Supplier<T> functional interface.
+11. Explain Consumer<T> functional interface.
+12. What is the difference between Predicate and Function?
+12. What is method reference in Java 8?
+13. Types of method references in Java 8.
+14. Difference between static method reference and instance method reference.
+15. What are streams in Java 8?
+16. Difference between intermediate and terminal operations in streams.
+17. What are short-circuiting operations in streams?
+18. Difference between map() and flatMap().
+19. What is the difference between forEach() and forEachOrdered()?
+20. Difference between findFirst() and findAny().
+21. What is the difference between sequential streams and parallel streams?
+22. When should you use parallel streams?
+23. What is Collectors.toList() in streams?
+24. How to perform groupingBy in streams?
+25. What is partitioningBy in streams?
+26. Difference between reduce() and collect().
+27. Can streams be reused once consumed?
+28. Difference between lazy evaluation and eager evaluation in streams.
+29. What is Optional in Java 8?
+30. Why was Optional introduced in Java?
+31. Difference between Optional.of(), Optional.ofNullable(), and Optional.empty().
+32. What is orElse() vs orElseGet() in Optional?
+33. What is orElseThrow() in Optional?
+34. How do you chain Optionals?
+35. Can Optional be serialized?
+36. Why is Optional not Serializable by default?
+37. What is the difference between Stream API and Iterator?
+38. What is the difference between map-reduce in Java 8 vs Hadoop?
+39. What are default methods in interfaces?
+40. What are static methods in interfaces?
+41. Difference between default methods and abstract methods.
+42. Can default methods be overridden in implementing class?
+43. What is Nashorn in Java 8?
+44. What is the difference between Predicate chaining using and() and or()?
+45. What is the peek() method in streams?
+46. What is distinct() in streams?
+47. How does limit() and skip() work in streams?
+48. What is the difference between sorted() with comparator vs natural order?
+49. Explain the concept of effectively final in Java 8.

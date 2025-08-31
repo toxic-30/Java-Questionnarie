@@ -1,30 +1,30 @@
-What are microservices and why are they used?
-Difference between monolithic and microservices architecture.
-What are the advantages of microservices?
-What are the common challenges of microservices?
-What is bounded context in microservices?
-What is the difference between synchronous and asynchronous communication in microservices?
-What is eventual consistency and why is it important?
-Difference between API Gateway and Service Registry.
-What is service decomposition and how do you design microservices?
-Explain database per service vs shared database approach.
-What is inter-service communication?
-What is service orchestration vs service choreography?
-Difference between RPC and messaging for microservices communication.
-What are the key principles of microservices?
-How do you handle cross-cutting concerns in microservices?
-How to create a microservice using Spring Boot?
-What is Spring Cloud?
-Difference between Spring Cloud and Spring Boot.
-What is Spring Cloud Config?
-How to manage centralized configuration in microservices?
-What is service discovery and why is it important?
-Difference between Eureka, Consul, and Zookeeper.
-How does Eureka server and Eureka client work?
-What is load balancing in microservices?
-Difference between Ribbon, Feign, and RestTemplate.
-What is API Gateway and why is it used?
-Difference between Zuul and Spring Cloud Gateway.
-How to implement circuit breaker in Spring Boot microservices?
-Explain Hystrix and Resilience4j.
-How to handle fallback methods in microservices?
+1. What are microservices and why are they used?
+2. Difference between monolithic and microservices architecture.
+3. What are the advantages of microservices?
+4. What are the common challenges of microservices?
+5. What is bounded context in microservices?
+6. What is the difference between synchronous and asynchronous communication in microservices?
+7. What is eventual consistency and why is it important?
+8. Difference between API Gateway and Service Registry.
+9. What is service decomposition and how do you design microservices?
+10. Explain database per service vs shared database approach.
+11. What is inter-service communication?
+12. What is service orchestration vs service choreography?
+12. Difference between RPC and messaging for microservices communication.
+13. What are the key principles of microservices?
+14. How do you handle cross-cutting concerns in microservices?
+15. How to create a microservice using Spring Boot?
+16. What is Spring Cloud?
+17. Difference between Spring Cloud and Spring Boot.
+18. What is Spring Cloud Config?
+19. How to manage centralized configuration in microservices?
+20. What is service discovery and why is it important?
+21. Difference between Eureka, Consul, and Zookeeper.
+22. How does Eureka server and Eureka client work?
+23. What is load balancing in microservices?
+24. Difference between Ribbon, Feign, and RestTemplate.
+25. What is API Gateway and why is it used?
+26. Difference between Zuul and Spring Cloud Gateway.
+27. How to implement circuit breaker in Spring Boot microservices?
+28. Explain Hystrix and Resilience4j.
+29. How to handle fallback methods in microservices?

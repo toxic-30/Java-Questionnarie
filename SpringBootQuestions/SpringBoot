@@ -1,50 +1,50 @@
-401. What is the Spring Framework and its advantages?
-402. What is Inversion of Control (IoC)?
-403. Difference between IoC and Dependency Injection (DI).
-404. Types of Dependency Injection in Spring (Constructor vs Setter).
-405. What are Beans in Spring?
-406. Difference between singleton and prototype bean scopes.
-407. What is the difference between @Component, @Service, @Repository, and @Controller?
-408. What is ApplicationContext in Spring?
-409. Difference between BeanFactory and ApplicationContext.
-410. How to configure Spring beans using XML, Annotation, and Java Config?
-411. What is the role of @Autowired?
-412. What is @Qualifier used for?
-413. Difference between @Resource and @Autowired.
-414. What are @PostConstruct and @PreDestroy annotations?
-415. Explain the Bean lifecycle in Spring.
-416. What is lazy initialization in Spring?
-417. How to handle circular dependencies in Spring?
-418. What are the different types of bean scopes in Spring?
-419. What is the difference between ApplicationEvent and EventListener?
-420. Explain @Value annotation.
-421. Difference between @PropertySource and Environment object.
-422. What is BeanDefinition in Spring?
-423. How do you create custom Spring annotations?
-424. What is a factory bean in Spring?
-425. Difference between @Configuration and @Component.
-426. How to use profiles in Spring (@Profile)?
-427. Explain Spring Expression Language (SpEL).
-428. How to define beans programmatically using BeanDefinitionRegistry.
-429. What is the difference between @Scope("singleton") and @Scope("prototype")?
-430. What is the difference between XML-based and Java-based configuration in Spring?
-431. What is Spring Boot and why is it used?
-432. Difference between Spring and Spring Boot.
-433. What are Spring Boot starters?
-434. What is auto-configuration in Spring Boot?
-435. How does Spring Boot application work internally?
-436. What is the difference between @SpringBootApplication and @EnableAutoConfiguration?
-437. How to create a Spring Boot application using Spring Initializr?
-438. Explain the role of application.properties and application.yml.
-439. How do you change default server port in Spring Boot?
-440. How do you configure profiles in Spring Boot?
-441. What are Spring Boot Actuator endpoints?
-442. How to monitor Spring Boot application using Actuator?
-443. Explain embedded Tomcat server in Spring Boot.
-444. Difference between embedded and standalone Tomcat.
-445. How to package Spring Boot application as jar and war?
-446. What is Spring Boot CLI?
-447. How do you run Spring Boot application from command line?
-448. How does Spring Boot handle dependency management?
-449. What is Spring Boot DevTools?
-450. What is the difference between Spring Boot 1.x and 2.x?
+1.  What is the Spring Framework and its advantages?
+2.  What is Inversion of Control (IoC)?
+3.  Difference between IoC and Dependency Injection (DI).
+4.  Types of Dependency Injection in Spring (Constructor vs Setter).
+5.  What are Beans in Spring?
+6.  Difference between singleton and prototype bean scopes.
+7.  What is the difference between @Component, @Service, @Repository, and @Controller?
+8.  What is ApplicationContext in Spring?
+9.  Difference between BeanFactory and ApplicationContext.
+10. How to configure Spring beans using XML, Annotation, and Java Config?
+11. What is the role of @Autowired?
+12. What is @Qualifier used for?
+12. Difference between @Resource and @Autowired.
+13. What are @PostConstruct and @PreDestroy annotations?
+14. Explain the Bean lifecycle in Spring.
+15. What is lazy initialization in Spring?
+16. How to handle circular dependencies in Spring?
+17. What are the different types of bean scopes in Spring?
+18. What is the difference between ApplicationEvent and EventListener?
+19. Explain @Value annotation.
+20. Difference between @PropertySource and Environment object.
+21. What is BeanDefinition in Spring?
+22. How do you create custom Spring annotations?
+23. What is a factory bean in Spring?
+24. Difference between @Configuration and @Component.
+25. How to use profiles in Spring (@Profile)?
+26. Explain Spring Expression Language (SpEL).
+27. How to define beans programmatically using BeanDefinitionRegistry.
+28. What is the difference between @Scope("singleton") and @Scope("prototype")?
+29. What is the difference between XML-based and Java-based configuration in Spring?
+30. What is Spring Boot and why is it used?
+31. Difference between Spring and Spring Boot.
+32. What are Spring Boot starters?
+33. What is auto-configuration in Spring Boot?
+34. How does Spring Boot application work internally?
+35. What is the difference between @SpringBootApplication and @EnableAutoConfiguration?
+36. How to create a Spring Boot application using Spring Initializr?
+37. Explain the role of application.properties and application.yml.
+38. How do you change default server port in Spring Boot?
+39. How do you configure profiles in Spring Boot?
+40. What are Spring Boot Actuator endpoints?
+41. How to monitor Spring Boot application using Actuator?
+42. Explain embedded Tomcat server in Spring Boot.
+43. Difference between embedded and standalone Tomcat.
+44. How to package Spring Boot application as jar and war?
+45. What is Spring Boot CLI?
+46. How do you run Spring Boot application from command line?
+47. How does Spring Boot handle dependency management?
+48. What is Spring Boot DevTools?
+49. What is the difference between Spring Boot 1.x and 2.x?

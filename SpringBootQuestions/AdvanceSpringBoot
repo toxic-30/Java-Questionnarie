@@ -1,73 +1,73 @@
 1. Actuator & Monitoring 
-What is Spring Boot Actuator and why is it used?
-How do you enable Spring Boot Actuator endpoints?
-Explain /actuator/health and its usage.
-What is /actuator/metrics used for?
-How do you create custom Actuator endpoints?
-How to expose only specific Actuator endpoints?
-How to secure Actuator endpoints in production?
-What is Micrometer and how does it integrate with Spring Boot?
-How to export metrics to Prometheus using Spring Boot?
-Difference between built-in metrics and custom metrics in Spring Boot.
+1. What is Spring Boot Actuator and why is it used?
+2. How do you enable Spring Boot Actuator endpoints?
+3. Explain /actuator/health and its usage.
+4. What is /actuator/metrics used for?
+5. How do you create custom Actuator endpoints?
+6. How to expose only specific Actuator endpoints?
+7. How to secure Actuator endpoints in production?
+8. What is Micrometer and how does it integrate with Spring Boot?
+9. How to export metrics to Prometheus using Spring Boot?
+10. Difference between built-in metrics and custom metrics in Spring Boot.
 
 2. Configuration & Profiles
-How do you define multiple profiles in Spring Boot?
-Difference between @Value and @ConfigurationProperties.
-How to activate a specific profile at runtime?
-How to create environment-specific configuration files?
-How to override configuration properties using environment variables?
-Difference between application.properties and application.yml.
-How to bind nested properties using @ConfigurationProperties.
-How to use default values in @Value annotations?
-How to validate configuration properties?
-How to dynamically reload configuration without restarting the application?
+1. How do you define multiple profiles in Spring Boot?
+2. Difference between @Value and @ConfigurationProperties.
+3. How to activate a specific profile at runtime?
+4. How to create environment-specific configuration files?
+5. How to override configuration properties using environment variables?
+6. Difference between application.properties and application.yml.
+7. How to bind nested properties using @ConfigurationProperties.
+8. How to use default values in @Value annotations?
+9. How to validate configuration properties?
+10. How to dynamically reload configuration without restarting the application?
 
 3. Transactions & Data Access 
-What is the @Transactional annotation and how does it work?
-Difference between propagation types in Spring transactions.
-Difference between isolation levels in Spring transactions.
-How to handle nested transactions?
-Difference between programmatic and declarative transactions.
-What happens when a runtime exception occurs inside a transaction?
-What happens when a checked exception occurs inside a transaction?
-How to rollback transactions manually?
-Difference between @Transactional(readOnly = true) and default transaction.
-How does Spring manage transactions internally?
+1. What is the @Transactional annotation and how does it work?
+2. Difference between propagation types in Spring transactions.
+3. Difference between isolation levels in Spring transactions.
+4. How to handle nested transactions?
+5. Difference between programmatic and declarative transactions.
+6. What happens when a runtime exception occurs inside a transaction?
+7. What happens when a checked exception occurs inside a transaction?
+8. How to rollback transactions manually?
+9. Difference between @Transactional(readOnly = true) and default transaction.
+10. How does Spring manage transactions internally?
 
 4. Caching 
-How to enable caching in Spring Boot?
-Difference between @Cacheable, @CachePut, and @CacheEvict.
-How to use multiple caches in Spring Boot?
-How to configure TTL (time-to-live) for caches?
-Difference between in-memory cache and distributed cache.
-How to integrate Redis or Ehcache with Spring Boot caching?
-How to evict all cache entries programmatically?
-How to cache method results conditionally?
-Difference between synchronous and asynchronous caching.
-How does cache key generation work in Spring Boot?
+1. How to enable caching in Spring Boot?
+2. Difference between @Cacheable, @CachePut, and @CacheEvict.
+3. How to use multiple caches in Spring Boot?
+4. How to configure TTL (time-to-live) for caches?
+5. Difference between in-memory cache and distributed cache.
+6. How to integrate Redis or Ehcache with Spring Boot caching?
+7. How to evict all cache entries programmatically?
+8. How to cache method results conditionally?
+9. Difference between synchronous and asynchronous caching.
+10. How does cache key generation work in Spring Boot?
 
 5. Security 
-How to implement JWT-based authentication in Spring Boot?
-Difference between Basic Auth, JWT, and OAuth2 in Spring Boot.
-How to implement OAuth2 login with Spring Security?
-How to secure REST endpoints with role-based access?
-What is the difference between method-level and URL-level security?
-How to implement @PreAuthorize and @PostAuthorize?
-How to configure CORS in Spring Boot security?
-Difference between stateless and stateful security.
-How to customize Spring Security login and error pages?
-How to implement refresh tokens with JWT?
+1. How to implement JWT-based authentication in Spring Boot?
+2. Difference between Basic Auth, JWT, and OAuth2 in Spring Boot.
+3. How to implement OAuth2 login with Spring Security?
+4. How to secure REST endpoints with role-based access?
+5. What is the difference between method-level and URL-level security?
+6. How to implement @PreAuthorize and @PostAuthorize?
+7. How to configure CORS in Spring Boot security?
+8. Difference between stateless and stateful security.
+9. How to customize Spring Security login and error pages?
+10. How to implement refresh tokens with JWT?
 
 6. Messaging & Asynchronous Processing 
-How to use @Async in Spring Boot?
-Difference between synchronous and asynchronous execution.
-How to handle exceptions in asynchronous methods?
-How to integrate Spring Boot with RabbitMQ or Kafka?
-What is ApplicationEventPublisher and how to publish custom events?
+1. How to use @Async in Spring Boot?
+2. Difference between synchronous and asynchronous execution.
+3. How to handle exceptions in asynchronous methods?
+4. How to integrate Spring Boot with RabbitMQ or Kafka?
+5. What is ApplicationEventPublisher and how to publish custom events?
 
 7. Advanced Testing
-Difference between @WebMvcTest and @SpringBootTest.
-How to mock dependencies using @MockBean.
-How to write integration tests with embedded H2 database?
-How to use Testcontainers for real database testing?
-How to test REST APIs with MockMvc and TestRestTemplate?
+1. Difference between @WebMvcTest and @SpringBootTest.
+2. How to mock dependencies using @MockBean.
+3. How to write integration tests with embedded H2 database?
+4. How to use Testcontainers for real database testing?
+5. How to test REST APIs with MockMvc and TestRestTemplate?

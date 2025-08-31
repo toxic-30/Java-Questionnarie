@@ -1,4 +1,4 @@
-Difference between List, Set, and Map.
+1. Difference between List, Set, and Map.
 -> List - An ordered collection (sequence) that allows duplicate elements.Ex: ArrayList, LinkedList, Vector, Stack.
 Key Points: Maintains insertion order. Elements can be accessed by index (position). Allows duplicates. Can contain multiple null values.
 Use case: When you need to preserve order, allow duplicates, and access elements by index.
@@ -9,49 +9,57 @@ Use case: When you want uniqueness of elements.
 Map - A key-value pair collection where keys are unique but values can be duplicate.Ex - HashMap, LinkedHashMap, TreeMap, ConcurrentHashMap.
 Key Points: Stores (key → value) mappings.Keys must be unique.Values can be duplicate.Allows one null key (in HashMap, LinkedHashMap) and multiple null values.
 Use case: When you need to map unique identifiers (keys) to values.
-How does HashMap work internally?
 
-What is hashCode() and equals() contract?
+2. How does HashMap work internally?
+->
+3. What is hashCode() and equals() contract?
 -> The contract is -
-1. If 2 objects  are equal, that means there hashcode will always be same
-2. If 2 objects has same hashcode, that doesnot mean they will always be  equal.
-How does LinkedHashMap maintain insertion order?
--> LinkedHashMap maintain insertion order because it uses doubly linkedlist to store the object into array bucket.
+a. If 2 objects  are equal, that means there hashcode will always be same
+b. If 2 objects has same hashcode, that does not mean they will always be  equal.
 
-Difference between HashMap and TreeMap.
+4. How does LinkedHashMap maintain insertion order?
+-> LinkedHashMap maintain insertion order because it uses doubly linked list to store the object into array bucket.
+
+5. Difference between HashMap and TreeMap.
 -> HashMap Does not guarantee any order of keys (neither insertion nor sorting). 1 null key allowed, multiple null values allowed.
 Uses hash table (array + linked list / red-black tree after collisions). 
-TC - get(), put(), remove() → O(1) average (hashing). Worst case (all keys collide into one bucket) → O(n), but very rare after Java 8 (because buckets use a tree when collisions exceed threshold).
+TC - get(), put(), remove() → O(1) average (hashing). Worst case (all keys collide into one bucket) → O(n), but very rare after Java 8
+(because buckets use a tree when collisions exceed threshold).
 Use case: Best when you care about fast lookups and order doesn’t matter.
 TreeMap - Maintains sorted order of keys (natural order or custom Comparator). Based on self-balancing binary search tree (Red-Black Tree).
 Null key NOT allowed (throws NullPointerException)but Null values allowed.
 TC : get(), put(), remove() → O(log n) (because internally it’s a Red-Black Tree).
 Use case - When you need sorted keys (like dictionary, leaderboard, or range queries).
 
-What is the load factor in HashMap?
+6. What is the load factor in HashMap?
 -> Load factor is the maximum capacity of hashmap before it expands, by default load factor of hashMap is 0.75.
 Default size of hashmap is 16, so 16*0.75 = 12, means hashmap resize will take place on the insertion of 13th element.
-Difference between HashMap and ConcurrentHashMap.
+
+7. Difference between HashMap and ConcurrentHashMap.
 -> 
-Can HashMap have null keys?
--> Yes, only 1 null key 
-Difference between fail-fast and fail-safe iterators.
+
+8. Can HashMap have null keys?
+-> Yes, only 1 null key
+
+9. Difference between fail-fast and fail-safe iterators.
 -> Fail-Fast Iterators - Iterators that throw a ConcurrentModificationException if the collection is structurally modified 
 (add/remove) after the iterator is created (except through the iterator’s own methods like remove()).
 Fail-Safe Iterators - Iterators that do not throw ConcurrentModificationException even if the collection is modified while iterating.
-What is the difference between Iterator and ListIterator?
+
+10. What is the difference between Iterator and ListIterator?
 -> Iterator works for all collection types, Only forward traversal, can only remove element 
    ListIterator works only for list, supports bidirectional traversal, allows (add, set, remove) along with index access.
-Can we modify a collection while iterating?
+
+11. Can we modify a collection while iterating?
 -> Yes we can modify a collection while iterating it only through iterator's own method. 
 
-What is CopyOnWriteArrayList?
+12. What is CopyOnWriteArrayList?
 -> CopyOnWriteArrayList is a thread-safe variant of ArrayList in Java that is part of the java.util.concurrent package.
 It implements the Copy-On-Write strategy, meaning every time you modify the list (add, remove, update), 
 it creates a new copy of the underlying array instead of modifying it directly.
 It is ideal when reads are frequent and writes are rare, ensuring thread-safe iteration without locks.
 
-Difference between ArrayList and LinkedList.
+13. Difference between ArrayList and LinkedList.
 -> ArrayList utilizes array for storing the data, it store data in contiguous memory so whenever we want to insert any element 
 (not in start or end), we need to shift the elements of the array, and the time complexity is O(n) and in case of access any 
 element randomly, we just need to provide the index and it will take O(1).
@@ -60,66 +68,82 @@ modifying the list, we store the data in a node and linked together with referen
 So, it takes O(1) time complexity but in case of access any element randomly, we need to traverse the entire linkedlist 
 and it will take O(n).
 
-Difference between HashSet and TreeSet.
+14. Difference between HashSet and TreeSet.
 -> 
 
-What is EnumSet?
+15. What is EnumSet?
 -> EnumSet can store only enum constants of single enum type.Much faster than HashSet for enum types 
 because it uses bits instead of hashing.
 
-What is IdentityHashMap?
--> 
-What are WeakHashMap and its use cases?
-Difference between Hashtable and HashMap.
-Why Hashtable is considered legacy?
-Difference between PriorityQueue and ArrayDeque.
-What is a BlockingQueue?
-What is ConcurrentSkipListMap?
-Difference between Comparable and Comparator.
-Can we sort HashMap by values?
-What is the difference between Collections.synchronizedList() and CopyOnWriteArrayList?
-What are generics in Java?
-Advantages of using generics.
-What is type erasure in generics?
-Difference between bounded and unbounded generics.
-Can we use primitive types in generics? Why not?
-What are wildcards in generics?
-Difference between ? extends and ? super.
-What is PECS (Producer Extends Consumer Super)?
-Can we overload a generic method?
-Can we create generic arrays?
-What is a generic constructor?
-Can we define a static generic method?
-What is type inference in generics?
-Difference between raw types and parameterized types.
-Can generics be used with exceptions?
-What is a reifiable type?
-Why generics are implemented using type erasure?
-Can generic classes extend other generic classes?
-Can you create generic enums?
-What is bridge method in generics?
-Difference between Class<T> and Class<?>.
-Can you use reflection with generics?
-How do generics affect bytecode?
-What is Diamond Operator (<>)?
-How does Collections.sort() work internally?
-What is binary search in collections?
-Difference between synchronized collections and concurrent collections.
-What are immutable collections in Java?
-Difference between Arrays.asList() and List.of().
-Can we modify a List returned by Arrays.asList()?
-Difference between Arrays.copyOf() and System.arraycopy().
-What is Spliterator?
-Difference between Enumeration and Iterator.
-Why Enumeration is legacy?
-What is ConcurrentModificationException?
-How to avoid ConcurrentModificationException?
-What are NavigableMap and NavigableSet?
-What is TreeMap and how does it store data?
-Difference between HashSet and LinkedHashSet.
-What is the default capacity of HashMap and ArrayList?
-What is modCount in ArrayList?
-How does resizing happen in ArrayList?
-How does resizing happen in HashMap?
-What is the difference between remove() in Iterator vs Collection?
-Explain identity vs equality in collections.
+16. What is IdentityHashMap?
+-> The IdentityHashMap is a special map used when the user requires the objects to be compared via reference
+Uses == operator instead of equals() to compare keys. So, even if two objects are logically equal (equals() returns true),
+they are treated as different if they are different objects in memory.
+Hash code is computed using System.identityHashCode() instead of key.hashCode().
+Slightly faster than HashMap for some low-level identity-based tasks because it skips equals() checks.
+Uses an array always of even length for storing keys at even indices and values at odd indices.
+Uses linear probing for collision handling.
+
+17. What are WeakHashMap and its use cases?
+-> In weakHashMap keys are stored as WeakReference objects. If a key in the WeakHashMap is no longer referenced anywhere
+else in the application, it becomes eligible for garbage collection, and its entry is automatically removed from the map.
+
+18. Difference between Hashtable and HashMap.
+->
+
+19. Why Hashtable is considered legacy?
+->
+
+20. Difference between PriorityQueue and ArrayDeque.
+->
+
+21. What is a BlockingQueue?
+->
+22. What is ConcurrentSkipListMap?
+23. Difference between Comparable and Comparator.
+24. Can we sort HashMap by values?
+25. What is the difference between Collections.synchronizedList() and CopyOnWriteArrayList?
+26. What are generics in Java? Advantages of using generics.
+27. What is type erasure in generics?
+28. Difference between bounded and unbounded generics.
+29. Can we use primitive types in generics? Why not?
+30. What are wildcards in generics?
+31. Difference between ? extends and ? super.
+32. What is PECS (Producer Extends Consumer Super)?
+33. Can we overload a generic method?
+34. Can we create generic arrays?
+35. What is a generic constructor?
+35. Can we define a static generic method?
+36. What is type inference in generics?
+37. Difference between raw types and parameterized types.
+38. Can generics be used with exceptions?
+39. What is a reifiable type?
+40. Why generics are implemented using type erasure?
+41. Can generic classes extend other generic classes?
+42. Can you create generic enums?
+43. What is bridge method in generics?
+44. Difference between Class<T> and Class<?>.
+44.  you use reflection with generics?
+45. How do generics affect bytecode?
+46. What is Diamond Operator (<>)?
+47. How does Collections.sort() work internally?
+48. What is binary search in collections?
+49. Difference between synchronized collections and concurrent collections.
+50. What are immutable collections in Java?
+51. Difference between Arrays.asList() and List.of().
+52. Can we modify a List returned by Arrays.asList()?
+53. Difference between Arrays.copyOf() and System.arraycopy().
+53. What is Spliterator?
+54. Difference between Enumeration and Iterator.
+55. Why Enumeration is legacy?
+56. What is ConcurrentModificationException?
+57. How to avoid ConcurrentModificationException?
+58. What are NavigableMap and NavigableSet?
+59. What is TreeMap and how does it store data?
+60. Difference between HashSet and LinkedHashSet.
+61. What is the default capacity of HashMap and ArrayList?
+62. What is modCount in ArrayList?
+63. How does resizing happen in ArrayList?
+64. How does resizing happen in HashMap?
+65. What is the difference between remove() in Iterator vs Collection?
+66. Explain identity vs equality in collections.

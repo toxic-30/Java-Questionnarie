@@ -1,15 +1,15 @@
-How to secure microservices using Spring Security?
-Difference between OAuth2 and JWT in microservices.
-How to implement OAuth2 login in microservices?
-How to implement token propagation between services?
-What is CORS and how to handle it in microservices?
-How to test microservices individually?
-Difference between unit testing, integration testing, and contract testing in microservices.
-What is consumer-driven contract testing?
-How to perform load testing on microservices?
-What is service resilience and how to implement it?
-How to deploy microservices in Docker containers?
-Difference between container and VM for microservices deployment.
-How to orchestrate microservices using Kubernetes?
-How to monitor microservices using Prometheus and Grafana?
-What are best practices for logging in microservices?
+1. How to secure microservices using Spring Security?
+2. Difference between OAuth2 and JWT in microservices.
+3. How to implement OAuth2 login in microservices?
+4. How to implement token propagation between services?
+5. What is CORS and how to handle it in microservices?
+6. How to test microservices individually?
+7. Difference between unit testing, integration testing, and contract testing in microservices.
+8. What is consumer-driven contract testing?
+9. How to perform load testing on microservices?
+10. What is service resilience and how to implement it?
+11. How to deploy microservices in Docker containers?
+12. Difference between container and VM for microservices deployment.
+12. How to orchestrate microservices using Kubernetes?
+13. How to monitor microservices using Prometheus and Grafana?
+14. What are best practices for logging in microservices?

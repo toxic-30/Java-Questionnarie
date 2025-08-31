@@ -1,25 +1,25 @@
-What is JVM?
-Difference between JDK, JRE, and JVM.
-What is JIT compiler?
-Explain JVM architecture.
-What are the different class loaders in Java?
-What is the parent delegation model in class loaders?
-What is the method area in JVM?
-What is the heap in JVM?
-Difference between heap memory and stack memory.
-What is PermGen?
-What replaced PermGen in Java 8?
-Difference between Metaspace and PermGen.
-What is garbage collection in Java?
-Difference between minor GC and major GC.
-What are garbage collection roots?
-What is reference counting in GC?
-Why is reference counting not used in JVM GC?
-What are strong, weak, soft, and phantom references?
-What is a memory leak in Java?
-What are stop-the-world events in GC?
-What is the difference between Serial, Parallel, CMS, and G1 collectors?
-Which garbage collector is default in Java 8?
-Which garbage collector is default in Java 11?
-How do you trigger garbage collection manually?
-Why is calling System.gc() not recommended?
+1. What is JVM?
+2. Difference between JDK, JRE, and JVM.
+3. What is JIT compiler?
+4. Explain JVM architecture.
+5. What are the different class loaders in Java?
+6. What is the parent delegation model in class loaders?
+7. What is the method area in JVM?
+8. What is the heap in JVM?
+9. Difference between heap memory and stack memory.
+10. What is PermGen?
+11. What replaced PermGen in Java 8?
+12. Difference between Metaspace and PermGen.
+12. What is garbage collection in Java?
+13. Difference between minor GC and major GC.
+14. What are garbage collection roots?
+15. What is reference counting in GC?
+16. Why is reference counting not used in JVM GC?
+17. What are strong, weak, soft, and phantom references?
+18. What is a memory leak in Java?
+19. What are stop-the-world events in GC?
+20. What is the difference between Serial, Parallel, CMS, and G1 collectors?
+21. Which garbage collector is default in Java 8?
+22. Which garbage collector is default in Java 11?
+23. How do you trigger garbage collection manually?
+24. Why is calling System.gc() not recommended?

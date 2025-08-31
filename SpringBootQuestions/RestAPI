@@ -1,30 +1,30 @@
-451. How to integrate Spring Boot with Hibernate/JPA?
-452. What is Spring Data JPA?
-453. Explain the difference between CrudRepository, JpaRepository, and PagingAndSortingRepository.
-454. How to create custom queries using @Query?
-455. What are derived queries in Spring Data JPA?
-456. What is method naming convention for queries in Spring Data JPA?
-457. How to implement pagination and sorting in Spring Data JPA?
-458. How to perform batch operations in Spring Data JPA?
-459. How to use native queries in Spring Data JPA?
-460. Difference between save() and saveAndFlush().
-461. What is RESTful web service?
-462. Difference between REST and SOAP.
-463. Explain @RestController vs @Controller.
-464. What is the role of @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping?
-465. How to handle query parameters in Spring Boot (@RequestParam)?
-466. How to handle path variables (@PathVariable)?
-467. How to handle request body (@RequestBody) and response body (@ResponseBody)?
-468. What is ResponseEntity and why is it used?
-469. How to handle exceptions in Spring Boot REST APIs (@ControllerAdvice)?
-470. How to implement global exception handling in Spring Boot?
-471. What are filters and interceptors in Spring Boot?
-472. Difference between HandlerInterceptor and Filter.
-473. How to implement cross-origin resource sharing (CORS) in Spring Boot?
-474. What is HATEOAS in Spring REST?
-475. How to enable logging in Spring Boot REST APIs?
-476. How to version REST APIs in Spring Boot?
-477. What is the difference between stateless and stateful REST APIs?
-478. How to handle validation in Spring Boot using @Valid and @Validated?
-479. Difference between @Valid and @Validated.
-480. How to implement JWT authentication in Spring Boot?
+1. How to integrate Spring Boot with Hibernate/JPA?
+2. What is Spring Data JPA?
+3. Explain the difference between CrudRepository, JpaRepository, and PagingAndSortingRepository.
+4. How to create custom queries using @Query?
+5. What are derived queries in Spring Data JPA?
+6. What is method naming convention for queries in Spring Data JPA?
+7. How to implement pagination and sorting in Spring Data JPA?
+8. How to perform batch operations in Spring Data JPA?
+9. How to use native queries in Spring Data JPA?
+10. Difference between save() and saveAndFlush().
+11. What is RESTful web service?
+12. Difference between REST and SOAP.
+12. Explain @RestController vs @Controller.
+13. What is the role of @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping?
+14. How to handle query parameters in Spring Boot (@RequestParam)?
+15. How to handle path variables (@PathVariable)?
+16. How to handle request body (@RequestBody) and response body (@ResponseBody)?
+17. What is ResponseEntity and why is it used?
+18. How to handle exceptions in Spring Boot REST APIs (@ControllerAdvice)?
+19. How to implement global exception handling in Spring Boot?
+20. What are filters and interceptors in Spring Boot?
+21. Difference between HandlerInterceptor and Filter.
+22. How to implement cross-origin resource sharing (CORS) in Spring Boot?
+23. What is HATEOAS in Spring REST?
+24. How to enable logging in Spring Boot REST APIs?
+25. How to version REST APIs in Spring Boot?
+26. What is the difference between stateless and stateful REST APIs?
+27. How to handle validation in Spring Boot using @Valid and @Validated?
+28. Difference between @Valid and @Validated.
+29. How to implement JWT authentication in Spring Boot?
