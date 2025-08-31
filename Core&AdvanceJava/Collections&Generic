@@ -61,11 +61,14 @@ So, it takes O(1) time complexity but in case of access any element randomly, we
 and it will take O(n).
 
 Difference between HashSet and TreeSet.
-
+-> 
 
 What is EnumSet?
+-> EnumSet can store only enum constants of single enum type.Much faster than HashSet for enum types 
+because it uses bits instead of hashing.
 
 What is IdentityHashMap?
+-> 
 What are WeakHashMap and its use cases?
 Difference between Hashtable and HashMap.
 Why Hashtable is considered legacy?
