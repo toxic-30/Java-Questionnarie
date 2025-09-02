@@ -89,13 +89,25 @@ Uses linear probing for collision handling.
 else in the application, it becomes eligible for garbage collection, and its entry is automatically removed from the map.
 
 18. Difference between Hashtable and HashMap.
-->
+-> HashMap is non-synchronized and allows one null key and multiple null values, making it faster and more widely used in
+   single-threaded or modern applications.
+   Hashtable, on the other hand, is synchronized (thread-safe) but slower, does not allow null keys/values,
+   and is considered a legacy class.
+   Today, ConcurrentHashMap is preferred instead of Hashtable for thread safety.
 
 19. Why Hashtable is considered legacy?
-->
+-> Hashtable was being used before collection was introduced. It is synchronized map but it locks whole map in every operation
+   which makes it insufficient. No null keys/values is allowed. After collection is introduced, HashMap and ConcurrentHashMap
+   is used instead of HashTable as performance wise they are better alternative of hashtable.
 
 20. Difference between PriorityQueue and ArrayDeque.
-->
+-> PriorityQueue - A queue that orders its elements according to their natural ordering (Comparable) or by a custom
+   Comparator provided at creation.Elements are arranged based on priority. The head of the queue is the least element
+   (min-heap by default). Null elements are not allowed, whereas duplicates are Allowed.
+   Use Case: When you need to process elements based on priority (e.g., task scheduling, Dijkstra’s algorithm).
+   ArrayDeque - A resizable array-based implementation of a double-ended queue (Deque). FIFO (Queue) or LIFO (Stack)
+   depending on how you use it. Null elements are not allowed, whereas duplicates are Allowed.
+   Use Case: When you need a fast queue or stack implementation. It's faster than Stack and LinkedList for such operations.
 
 21. What is a BlockingQueue?
 ->
