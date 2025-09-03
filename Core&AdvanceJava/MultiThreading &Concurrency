@@ -55,24 +55,103 @@ in a round-robin fashion
 but it didn't release lock. Ex- t1.sleep(2000) -> pause for 2 sec.
 
 13. Difference between sleep() and wait().
-->  
+->  sleep(): Used to pause execution for a fixed time; does not release the lock.
+    wait(): Used for communication between threads; releases the lock and waits until another thread
+    notifies it.
+
 14. Can we call wait() without synchronization?
+-> No, wait() is used for inter-thread communication and must release the monitor lock,so it requires the calling thread
+   to own the lock (synchronized block), otherwise IllegalMonitorStateException occurs
+We can call sleep() without synchronization as it only pauses the current thread and doesn’t deal with
+object locks, so no synchronization is required.
+
 15. Difference between wait(), notify(), and notifyAll().
+->  wait() -> Makes current thread wait.
+    notify() -> Wakes up one waiting thread.
+    notifyAll() -> Wakes up all waiting threads.
+
 16. What happens if a thread calls wait() and never gets notified?
+->  If a thread calls wait() and no other thread ever calls notify() or notifyAll() on the same object, that thread will
+remain in the WAITING state forever, effectively getting stuck. To avoid this, best practices are to use wait(timeout)
+or always call wait() inside a loop that checks a condition, ensuring the thread does not wait indefinitely.
+
 17. Can notify() wake up multiple threads?
+->  No, notify() wakes up exactly one thread that is waiting on the object's monitor. If multiple threads are waiting,
+the thread scheduler (JVM) decides which single thread to wake. You cannot control which thread gets chosen.
+
 18. Difference between synchronized method and synchronized block.
+->  Synchronized Method → when the entire method is critical (e.g., updating a shared counter). It is more flexible
+    Synchronized Block → when only part of the method needs synchronization (e.g.,logging can be outside, but data update inside).
+
 19. What is the use of volatile keyword?
+->  The volatile keyword in Java is used to mark a variable so that:
+    Its value is always read from main memory (not from CPU cache).Its updates are always written directly to main memory.
+    Volatile keyword guarantees visibility of changes across threads, but not atomicity.(Atomicity means: an operation
+    happens as a single indivisible step — no other thread can see it half-done.)
+
 20. Difference between volatile and synchronized.
+->  As mentioned above that volatile keyword only provide visibility, not atomicity. So synchronized keyword provides
+    both.
+    volatile keyword is only used for static & instance variable whereas synchronized is used for method or block of cde.
+ volatile - no lock involved, faster(no lock overhead) & non -blocking(threads don’t wait).
+ Synchronized - Requires a lock (monitor), Slower (threads may block, context switching) & Blocking (one thread at a time can hold the lock)
+
 21. What is the happens-before relationship in Java Memory Model?
+->
 22. What are atomic operations in Java?
+->  An atomic operation is one that is performed as a single, indivisible step:
+    Either it happens completely, or it doesn’t happen at all. No other thread can see it in an intermediate (half-done) state.
+Compound operations (++, +=) are not atomic. Use synchronized or Atomic classes for atomic compound operations.
+
 23. What is the difference between AtomicInteger and synchronized int?
+->
 24. What is deadlock in Java?
+->  Deadlock means two or more threads are blocked forever, waiting for each other to release resources.
+Ex - Thread1 has locked resource1 and now waiting for resource2 to get unlocked.
+Similarly, Thread2 has locked resource2 and now waiting for resource1 to get unlocked.
+Now this is what deadlock is.
+
 25. How do you avoid deadlock?
+-> Strategies to prevent deadlock are -
+a. Lock Ordering (Most Common) -> Always acquire locks in a fixed, global order. If all threads follow the same order,
+circular wait can’t happen.
+b. Try-Lock with Timeout -> Instead of blocking indefinitely, use tryLock() from ReentrantLock with a timeout.
+If a lock isn’t acquired, release any held locks and retry.
+c. Avoid Nested Locks -> Try to design code to acquire only one lock at a time.
+d. Try to use thread safe data structure.
+
 26. What is livelock?
+->  A livelock is similar to a deadlock, but here threads are not blocked – instead, they keep changing their state
+    in response to each other and never make progress.
+So in livelock:
+Threads are active (not stuck like in deadlock).
+But they are not progressing towards completion
+
 27. What is starvation in multithreading?
+->  Starvation happens when a thread is ready to run, but it is continuously denied CPU access because higher-priority
+threads (or other resource-holding threads) keep getting scheduled.
+To prevent starvation - a. Use reentrant lock. b. Avoid assigning all work to priority thread.
+
 28. Difference between deadlock, livelock, and starvation.
+->  DeadLock -  Two or more threads are blocked forever, waiting for each other’s resources.
+                Threads state: Blocked, not running.
+                CPU usage: 0% (they’re stuck).
+                Cause: Circular wait (A waits for B, B waits for A).
+
+    LiveLock -  Two or more threads keep responding to each other and changing their states, but they never make progress.
+                Threads state: Running, but uselessly.
+                CPU usage: High (threads actively running).
+                Cause: Excessive yielding / backing off
+
+    Starvation - A thread is ready to run but is continuously denied CPU or resources because others dominate them.
+                 Threads state: Waiting indefinitely for CPU or resource.
+                 CPU usage: Depends (other threads are hogging CPU).
+                 Cause: Unfair scheduling or priority inversion.
+
 29. What is the difference between concurrency and parallelism?
+->
 30. What is ThreadLocal in Java?
+->
 31. When should we use ThreadLocal?
 32. What is the difference between Callable and Runnable?
 33. What is Future in Java concurrency?
