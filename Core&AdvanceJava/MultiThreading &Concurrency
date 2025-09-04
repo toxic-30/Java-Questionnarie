@@ -149,17 +149,51 @@ To prevent starvation - a. Use reentrant lock. b. Avoid assigning all work to pr
                  Cause: Unfair scheduling or priority inversion.
 
 29. What is the difference between concurrency and parallelism?
-->
+->  Concurrency - It's about dealing with multiple tasks at once, but not necessarily running them at the same exact time.
+    Think of it as task switching: a system interleaves execution of tasks, giving the illusion they progress simultaneously.
+    Goal: Manage multiple tasks efficiently (fairness, responsiveness).
+    Example: On a single-core CPU: running multiple threads concurrently means the CPU switches between them quickly
+    (context switching).
+    In Java: using multiple threads with ExecutorService — even if only one core exists, tasks appear concurrent.
+
+    Parallelism - Parallelism is about actually executing multiple tasks simultaneously, typically using multiple CPU cores.
+    Goal: Speed up execution by doing work in parallel.
+    Example: On a quad-core CPU: processing four data chunks simultaneously.
+    In Java: ForkJoinPool splitting tasks across available cores.
+
 30. What is ThreadLocal in Java?
-->
+->  ThreadLocal<T> is a special class in Java that provides thread-local variables.
+    Each thread that accesses a ThreadLocal variable has its own independent copy of that variable, that means values
+    stored in a ThreadLocal are not shared between threads.
+
 31. When should we use ThreadLocal?
+->  Use ThreadLocal when you need thread-confined state, such as user/session data, database connections, or
+non-thread-safe utilities, where synchronization would otherwise be needed.
+
 32. What is the difference between Callable and Runnable?
+->  Runnable → when your task just executes code without returning anything (logging, updating cache, sending notification).
+    Callable → when your task needs to return a result or throw checked exceptions (e.g., fetching data, calculating a value).
+
 33. What is Future in Java concurrency?
+->
 34. What is ExecutorService in Java?
+->  ExecutorService is an interface in java.util.concurrent package.It represents a thread pool manager that handles
+and controls multiple threads for you. Instead of creating and managing threads manually (new Thread(...)),
+you submit tasks (Runnable or Callable) to an ExecutorService.
+In short: It decouples task submission from thread management.
+
 35. Difference between submit() and execute() in ExecutorService.
+->
+
 36. What is ScheduledExecutorService?
+->
+
 37. How do you shut down ExecutorService?
+->
+
 38. Difference between shutdown() and shutdownNow().
+->
+
 39. What is ForkJoinPool in Java?
 40. Difference between ForkJoinPool and ThreadPoolExecutor.
 41. What is the join() method in threads?
