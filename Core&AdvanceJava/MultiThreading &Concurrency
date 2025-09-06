@@ -1,13 +1,16 @@
 1. What is multithreading in Java?
 -> Multithreading is the concurrent execution of two or more threads. It allows Java programs to perform multiple tasks
    simultaneously, improving CPU utilization.
+
 2. Difference between process and thread.
 -> Process: Independent execution unit with its own memory space. Heavyweight.
    Thread: Lightweight sub-unit of a process, shares memory with other threads in the same process.
+
 3. How do you create a thread in Java?
 -> By extending Thread class and overriding run().
    By implementing Runnable interface and passing it to a Thread object.
    By using Executors / Callable / Future (modern way).
+
 4. Difference between extending Thread class and implementing Runnable.
 -> Thread: Can’t extend any other class (since Java allows single inheritance).
    Runnable: More flexible, preferred, allows implementing multiple interfaces.
@@ -30,7 +33,7 @@
 8. Difference between daemon thread and user thread.
 -> User Thread = The default type of thread in Java. Keeps the JVM alive until all user threads have finished.
    Daemon Thread = A background service thread that provides support to user threads.JVM does not wait for daemon
- threads to finish; it exits as soon as all user threads are done.Used for tasks like garbage collection, logging, etc.
+threads to finish; it exits as soon as all user threads are done.Used for tasks like garbage collection, logging, etc.
 
 9. What is the default priority of a thread?
 ->  Every Java thread has a priority, which helps the Thread Scheduler decide which thread to run first.
@@ -46,7 +49,7 @@ multiple threads are in the Runnable state. We cannot control it directly in any
 12. Difference between time slicing and preemptive scheduling.
 -> In preemptive scheduling, the highest-priority thread always runs first.If a new thread with higher priority becomes
 ready, it preempts (interrupts) the currently running thread. Thread execution order depends mostly on priority.
-Time Slicing - CPU time is divided into small time slices (quantums). Each thread gets a fair share of CPU for its time
+Time Slicing - CPU time is divided into small time slices (quantum). Each thread gets a fair share of CPU for its time
 slice. After its time expires, the next thread gets CPU, even if the current thread is not finished. Execution rotates
 in a round-robin fashion
 
@@ -56,12 +59,11 @@ but it didn't release lock. Ex- t1.sleep(2000) -> pause for 2 sec.
 
 13. Difference between sleep() and wait().
 ->  sleep(): Used to pause execution for a fixed time; does not release the lock.
-    wait(): Used for communication between threads; releases the lock and waits until another thread
-    notifies it.
+    wait(): Used for communication between threads; releases the lock and waits until another thread notifies it.
 
 14. Can we call wait() without synchronization?
 -> No, wait() is used for inter-thread communication and must release the monitor lock,so it requires the calling thread
-   to own the lock (synchronized block), otherwise IllegalMonitorStateException occurs
+to own the lock (synchronized block), otherwise IllegalMonitorStateException occurs
 We can call sleep() without synchronization as it only pauses the current thread and doesn’t deal with
 object locks, so no synchronization is required.
 
@@ -98,6 +100,7 @@ the thread scheduler (JVM) decides which single thread to wake. You cannot contr
 
 21. What is the happens-before relationship in Java Memory Model?
 ->
+
 22. What are atomic operations in Java?
 ->  An atomic operation is one that is performed as a single, indivisible step:
     Either it happens completely, or it doesn’t happen at all. No other thread can see it in an intermediate (half-done) state.
@@ -176,6 +179,7 @@ non-thread-safe utilities, where synchronization would otherwise be needed.
 
 33. What is Future in Java concurrency?
 ->
+
 34. What is ExecutorService in Java?
 ->  ExecutorService is an interface in java.util.concurrent package.It represents a thread pool manager that handles
 and controls multiple threads for you. Instead of creating and managing threads manually (new Thread(...)),
@@ -192,16 +196,101 @@ In short: It decouples task submission from thread management.
 ->
 
 38. Difference between shutdown() and shutdownNow().
-->
+-> 
 
 39. What is ForkJoinPool in Java?
+->
+
 40. Difference between ForkJoinPool and ThreadPoolExecutor.
+->
+
 41. What is the join() method in threads?
+->  join() makes the current thread wait until the thread on which join() is called finishes execution.
+Ex t1.join() here means main thread will wait, until and unless the t1 thread doesnot changed it state from running to
+terminated.
+
 42. What is the yield() method in threads?
+-> It moves the thread from the Running state back to the Runnable state. The thread scheduler may then decide to let
+another thread run (especially one of the same priority). If no other thread of the same priority is waiting, the current
+thread may continue execution.
+As choosing the next thread behaviour is platform and JVM dependent, so it is not sure that it will follow fairness.
+
 43. Difference between yield() and sleep().
+->  yield() → Hint to the scheduler: “I’m ready to pause, let other threads of the same priority run.”
+    Moves the current thread from Running → Runnable state. Scheduler may immediately pick it again → no guarantee of pause.
+    No checked exception. It take place for very short period of time or  possibly zero — depends on scheduler.
+
+    sleep(ms) → Force the current thread to pause for a specified duration (milliseconds or nanoseconds).
+    Moves the current thread to Timed Waiting state. Guaranteed to pause for at least the given time.
+    Must handle or declare InterruptedException. We can make thread sleep for any period of time.
+
 44. What is the difference between interrupt() and stop()?
+->  The stop() method forcibly terminates a thread, immediately stopping its execution at any point.
+    It is considered unsafe and has been deprecated since Java 2. This is because stop() can lead to inconsistent object
+    states and resource leaks. When a thread is abruptly stopped, it doesn't get a chance to clean up resources, release
+    locks, or complete ongoing operations.
+
+    Thread.interrupt():
+    The interrupt() method does not immediately stop a thread. Instead, it sets an "interrupted" flag on the target thread.
+    he interrupted thread is then responsible for checking this flag periodically (using Thread.isInterrupted()) or
+    handling InterruptedException if it's in a blocking operation like Thread.sleep(), Object.wait(), or I/O operations.
+    This cooperative approach allows the thread to gracefully shut down, clean up resources, and maintain data consistency
+    before terminating its execution.
+
 45. Why is stop() deprecated in Java?
+->  The Thread.stop() method in Java was deprecated because it’s inherently unsafe
+- When stop() is called, it forces the thread to terminate immediately and releases all the locks (monitors) it holds.
+If the thread was in the middle of updating shared data, other threads might see that data in a corrupted or
+inconsistent state.
+
 46. What is the ReentrantLock class?
+->  A ReentrantLock allow threads to enter into lock on a resource more than once. When the thread first enters into lock,
+a hold count is set to one. Before unlocking the thread can re-enter into lock again and every time hold count is incremented
+by one. For every unlock request, hold count is decremented by one and when hold count is 0, the resource is unlocked.
+
 47. Difference between ReentrantLock and synchronized.
+->  The synchronized keyword is quite rigid in its use. e.g, a thread can take a lock only once.
+    Synchronized blocks don’t offer any mechanism of a waiting queue and after the exit of one thread, any thread can
+    take the lock. This could lead to starvation of resources for some other thread for a very long period of time.
+    ReentrantLock provides a method called lockInterruptibly(), which can be used to interrupt thread when it is waiting
+    for lock. Similarly tryLock() with timeout can be used to timeout if lock is not available in certain time period.
+
+    Fairness property provides lock to longest waiting thread, in case of contention. synchronized keyword doesn’t
+    support fairness. Any thread can acquire lock once released, no preference can be specified.
+    ReentrantLock fair by specifying fairness property, while creating instance of ReentrantLock.
+
+    ReentrantLock provides convenient tryLock() method, which acquires lock only if its available or not held by any
+    other thread. This reduce blocking of thread waiting for lock in Java application.
+    This is not possible in case of synchronized keyword.
+
+    ReentrantLock also provides convenient method to get List of all threads waiting for lock. We can create different
+    conditions for Lock and different thread can await() for different conditions.
+
+    Synchronization code is much cleaner and easy to maintain whereas with Lock we are forced to have try-finally
+    block to make sure Lock is released even if some exception is thrown between lock() and unlock() method calls.
+
+    Synchronization blocks or methods can cover only one method whereas we can acquire the lock in one method and
+    release it in another method with Lock API.
+
 48. What is ReadWriteLock in Java?
+-> In ReadWriteLock multiple thread can perform read operation simultaneously until and unless no thread is performing
+write operation, but in case of write only 1 thread is allowed at a time and no other can access the resource.
+
 49. Difference between fair and non-fair locks in ReentrantLock.
+->  Fair Reentrant Lock:
+    A fair reentrant lock prioritizes threads based on their arrival time. When multiple threads are waiting to acquire
+    the lock, the longest-waiting thread is granted access first.
+    This ensures a first-come, first-served (FIFO) order of lock acquisition among contending threads.
+    Fairness can reduce the risk of thread starvation, where a thread repeatedly loses out on acquiring the lock.
+    However, fair locks can sometimes have slightly lower throughput compared to unfair locks due to the overhead
+    of maintaining the waiting queue and ensuring strict ordering.
+
+    Unfair Reentrant Lock:
+    An unfair reentrant lock does not guarantee any specific order of lock acquisition among waiting threads. When the
+    lock becomes available, any of the waiting threads (or even a newly arriving thread) might acquire it,
+    regardless of how long they have been waiting.
+    Unfair locks generally offer higher throughput because they avoid the overhead associated with maintaining a
+    strict queue and can allow for more efficient lock acquisition in certain scenarios, especially when contention
+    is low.
+    However, unfair locks carry the risk of thread starvation, where a particular thread might repeatedly be
+     bypassed by other threads and never acquire the lock.
