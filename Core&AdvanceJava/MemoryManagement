@@ -1,7 +1,24 @@
 1. What is JVM?
+-> The Java Virtual Machine (JVM) is an abstract machine that runs Java bytecode. It provides platform independence by
+   executing .class files on any OS with a JVM implementation.
+
 2. Difference between JDK, JRE, and JVM.
+-> JDK = JRE + Development tools((to develop + run Java apps)
+   JRE = JVM + Libraries(to run Java apps)
+   JVM = Runs the bytecode
+
 3. What is JIT compiler?
+-> JIT Compiler: Converts frequently used bytecode into native machine code at runtime (faster).
+   The execution flow -
+   Java source code (.java) → compiled by javac (Java compiler) → into bytecode (.class).
+   JVM loads the bytecode using the ClassLoader.
+   Execution inside JVM happens in two possible ways:
+   Interpreter: Reads and executes bytecode instruction by instruction (slower).
+   JIT Compiler: Converts frequently used bytecode into native machine code at runtime (faster).
+
 4. Explain JVM architecture.
+->
+
 5. What are the different class loaders in Java?
 6. What is the parent delegation model in class loaders?
 7. What is the method area in JVM?

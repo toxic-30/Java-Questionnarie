@@ -1,24 +1,108 @@
 1. What are the main principles of Object-Oriented Programming?
+-> The 4 main pillars of OOPS are -
+   Encapsulation → Binding data + methods, hiding implementation.
+   Abstraction → Hiding details, showing essentials (via interfaces/abstract classes).
+   Inheritance → Reusing code by acquiring parent properties.
+   Polymorphism → One thing, many forms (overloading/overriding).
+
 2. Difference between == and .equals() in Java?
+-> == this checks whether 2 string are of same memory location and .equals checks the content of the string.
+
 3. Can you override a static method in Java? Why/why not?
+-> No, static method belongs to class, so they are decided at compile time not runtime and its object/instance
+   cannot be created
+
 4. Explain constructor overloading vs method overloading.
+-> Constructor Overloading = Same class, different constructors → object creation flexibility.
+   Method Overloading = Same class, same method name, different params → functional flexibility.
+
 5. What is method overriding and rules for overriding in Java?
+-> Method overriding happens when a subclass (child class) provides a specific implementation of a method that is already defined in its parent (superclass).
+   It is used to achieve runtime polymorphism (dynamic method dispatch) and to allow a subclass to provide a
+   specialized behavior for a parent’s method.
+   Rules -
+   Same Method Signature - Method name and parameter list must be exactly same as the parent class method.
+   Return Type must be the same as parent’s method OR a covariant type (subclass of parent’s return type).
+   Access Modifier - Cannot reduce the visibility of the parent’s method. Example: If parent method is public, child
+   cannot make it protected or private. But it can increase visibility (e.g., protected → public).
+   Exceptions - Child method cannot throw broader checked exceptions than parent. Example: If parent method throws
+   IOException, child can throw IOException or subclass of it, but not a broader exception like Exception.
+   @Override Annotation - Optional, but useful — compiler will check if you are actually overriding correctly.
+
 6. Difference between final, finally, and finalize().
+-> Final - If we mark any class, variable or method as final, so we cannot change it's value.
+    so we cannot override the final method and Final class cannot be extended
+    Finally is used with try-catch block, it means irrespective of exception, the finally method will execute. So any
+    logic which we need to take place after exception also should be kept in finally block.
+    Finalize = Method called by GC before object destruction (now deprecated).
+
 7. What is the difference between abstract class and interface?
+-> Abstract Class - Can have abstract methods and concrete (implemented) methods.
+                    Can have abstract methods, default methods, static and private methods.
+                    Method can be public, protected and private.
+                    Can extend only 1 abstract class.
+                    Can have constructor
+   Interface - Can have instance variables, static variables, and constants.
+               Only public static final constants (no instance variables)
+   	           All methods need to be public.
+   	           Can implement multiple interfaces.
+               Cannot have constructor
+
 8. Can an abstract class have a constructor?
+-> Yes abstract class can have a constructor, to allow its fields to be initialized when subclasses are created.
+   You cannot directly create an object of an abstract class
+
 9. Explain the super keyword and its use cases.
+->  Super keyword is used in method overriding.
+    When a subclass overrides a method, sometimes it still wants to use the parent class’s version of that method.
+    That’s where super comes in, it is used to call the overridden method of the parent class.
+    Use case - Access parent's class variable and Call parent class constructor.
+
 10. Can we declare a class as both abstract and final? Why not?
+->	No, as class is marked abstract so that other class can inherited it, but if it would be declared final so it would
+    not be extended.
+
 11. What happens if you don’t provide a constructor in a class?
+->  By default every class has constructor, without constructor initialization of class is not possible.
+
 12. Difference between stack and heap memory in Java.
+->
+
 12. What is the default value of local variables in Java?
+->  Local variables do not get any default value. They must be initialized before use, otherwise the compiler will throw an error.
+
 13. Explain pass by value vs pass by reference in Java.
+->
+
 14. What is the use of this keyword?
 15. Difference between shallow copy and deep copy in Java.
+->  Shallow copy - Copies the object and references of contained objects (not the actual objects themselves)
+    Deep copy - Copies the object and all the objects it references (recursively)
+
 16. Can you create an immutable class? How?
+->  Yes, we can create an immutable class. The below given steps need to be followed -
+    Declare the class as final. Make all the fields private and final.
+    No setter method as it can modify fields. Initialize fields only through constructor.
+    For mutable fields - create defensive copy for these fields, also, take a copy in the constructor to avoid outside modification.
+
 17. What is a marker interface? Give examples.
+->  A marker interface is an interface that does not have any methods or fields. It is used to mark (tag) a class so
+    that the JVM or frameworks can give special treatment to those classes. Basically, it conveys metadata about the
+    class to the JVM/compiler.
+
 18. What is the difference between String, StringBuilder, and StringBuffer?
+->	String → Immutable, safe to share, but costly in modifications.
+    StringBuilder → Mutable, fast, but not synchronized (best in single-threaded apps).
+    StringBuffer → Mutable, synchronized, hence thread-safe but slower (used in multi-threaded apps).
+
 19. Why are strings immutable in Java?
+->  Security: Strings are widely used in class loading, database URLs, file paths. If mutable, malicious code could change them.
+    Caching: String literals are stored in the String Pool. Immutability ensures one object can be shared safely.
+    Thread-safety: Immutable objects are automatically thread-safe.
+    Hashing: Strings are often used as keys in HashMap/HashSet. Their immutability ensures hashCode remains consistent.
+
 20. What are wrapper classes in Java?
+->
 21. Difference between primitive types and reference types.
 22. What is autoboxing and unboxing?
 23. Explain Java memory model.
