@@ -31,10 +31,10 @@
 
 6. Difference between final, finally, and finalize().
 -> Final - If we mark any class, variable or method as final, so we cannot change it's value.
-    so we cannot override the final method and Final class cannot be extended
-    Finally is used with try-catch block, it means irrespective of exception, the finally method will execute. So any
-    logic which we need to take place after exception also should be kept in finally block.
-    Finalize = Method called by GC before object destruction (now deprecated).
+   so we cannot override the final method and Final class cannot be extended
+   Finally is used with try-catch block, it means irrespective of exception, the finally method will execute. So any
+   logic which we need to take place after exception also should be kept in finally block.
+   Finalize = Method called by GC before object destruction (now deprecated).
 
 7. What is the difference between abstract class and interface?
 -> Abstract Class - Can have abstract methods and concrete (implemented) methods.
@@ -53,10 +53,10 @@
    You cannot directly create an object of an abstract class
 
 9. Explain the super keyword and its use cases.
-->  Super keyword is used in method overriding.
-    When a subclass overrides a method, sometimes it still wants to use the parent class’s version of that method.
-    That’s where super comes in, it is used to call the overridden method of the parent class.
-    Use case - Access parent's class variable and Call parent class constructor.
+-> Super keyword is used in method overriding.
+   When a subclass overrides a method, sometimes it still wants to use the parent class’s version of that method.
+   That’s where super comes in, it is used to call the overridden method of the parent class.
+   Use case - Access parent's class variable and Call parent class constructor.
 
 10. Can we declare a class as both abstract and final? Why not?
 ->	No, as class is marked abstract so that other class can inherited it, but if it would be declared final so it would
@@ -66,15 +66,34 @@
 ->  By default every class has constructor, without constructor initialization of class is not possible.
 
 12. Difference between stack and heap memory in Java.
-->
+->| Stack Memory                                                                | Heap Memory
+  |-----------------------------------------------------------------------------|---------------------------------------------------------------------------
+  | Stores method execution details like local variables, references, and calls.| Stores objects and instance variables created at runtime.
+  | Automatically allocated/deallocated when a method is called/returns.        | Allocated when `new` keyword is used, freed by Garbage Collector.
+  | Local primitive variables Object references (not objects themselves)        | All objects created using `new` nd Instance variables of objects
+  | and Method call frames, all these are stored in stack memory                | are stored in heap memory.
+  | Exists only during method execution; stack frame removed after method ends. | Objects remain until no reference points to them, then GC clears them.
+  | Smaller and fixed per thread.                                               | Larger, depends on JVM and system.
+  | Each thread has its own stack.                                              | Heap is shared among all threads.
+  | Faster (managed in LIFO order).                                             | Slower (complex memory management + GC).
+  | Stack memory overflow → `StackOverflowError`.                               | Heap memory overflow → `OutOfMemoryError: Java Heap Space`.
 
 12. What is the default value of local variables in Java?
 ->  Local variables do not get any default value. They must be initialized before use, otherwise the compiler will throw an error.
 
 13. Explain pass by value vs pass by reference in Java.
-->
+->  Pass by Value - A copy of the variable’s value is passed to the method. Changes inside the method do not affect the
+    original variable. Primitive types are always passed by value in Java.
+    Pass by Reference - Java is technically never pass by reference
 
 14. What is the use of this keyword?
+->  The this keyword in Java refers to the current object. It is mainly used to:
+    Differentiate instance variables from local variables.
+    Invoke current class methods.
+    Call one constructor from another (constructor chaining).
+    Pass the current object as an argument.
+    Return the current object (useful for method chaining).
+
 15. Difference between shallow copy and deep copy in Java.
 ->  Shallow copy - Copies the object and references of contained objects (not the actual objects themselves)
     Deep copy - Copies the object and all the objects it references (recursively)
@@ -102,17 +121,59 @@
     Hashing: Strings are often used as keys in HashMap/HashSet. Their immutability ensures hashCode remains consistent.
 
 20. What are wrapper classes in Java?
-->
+->  A wrapper class is a class that is used to convert a primitive data type into an object. Java provides wrapper
+    classes for all primitive types, and they are defined in the java.lang package.
+
 21. Difference between primitive types and reference types.
+->  Primitive types store actual values, directly in stack memory (value itself is stored).
+    Reference types store addresses (pointers) to objects. The reference(address) is stored in stack, but the actual
+    object is stored in heap memory.
+
 22. What is autoboxing and unboxing?
+->  Autoboxing is the automatic conversion of a primitive type into its corresponding wrapper class object.
+    Unboxing is the automatic conversion of a wrapper class object into its corresponding primitive type.
+
 23. Explain Java memory model.
+->
+
 24. Can main() be overloaded in Java?
+->  Yes, we can overload the main() method in Java like any other method. But JVM always calls only public static void
+    main(String[] args) as the starting point. Other overloaded versions are just normal methods and can only be called
+    explicitly.
+
 25. What happens if we make main() non-static?
+->  If we make main() non-static, JVM won’t recognize it as the program entry point and runtime error will happen.
+    main() must be static so that JVM can invoke it without creating an object.However, we can define a non-static
+    main() as an overloaded method, but it must be called explicitly from the static one.
+
 26. What is a static block? When is it executed?
+->  A static block in Java is a block of code inside a class, declared using the static keyword.It is used to initialize
+    static variables or perform operations that should run once per class loading.
+
 27. Difference between static variable and instance variable.
+->  Static variables belong to the class and are shared by all objects. Static variables are initialized once when the
+    class is loaded.
+    Instance variables belong to the object and each object has its own copy. Instance variables are initialized when
+    an object is created.
+
 28. What are default methods in interfaces?
+->  A default method is a method in an interface that has a body (implementation), introduced in Java 8. It allows
+    interfaces to evolve without breaking existing implementations, and implementing classes can optionally override it.
+
 29. What is multiple inheritance and why is it not supported?
+->  Multiple inheritance is a feature where a class can inherit from more than one parent class. It allows a class to
+    acquire properties and methods from multiple classes.
+    Reasons why multiple inheritance is not allowed -
+    Diamond Problem / Ambiguity: If two parent classes have a method with the same signature, the compiler won’t know
+    which one to inherit.
+    Complexity in object layout: Multiple inheritance complicates memory layout of objects and method dispatch.
+    Java prefers simplicity and safety. Instead, it uses interfaces to achieve multiple inheritance.
+
 30. How do interfaces achieve multiple inheritance?
+->  Java interfaces allow multiple inheritance by letting a class implement multiple interfaces. Since interfaces define
+    only method signatures (and optionally default/static methods), there’s no ambiguity in state or behavior, avoiding
+    the diamond problem associated with class inheritance
+
 31. What is the difference between abstract methods and default methods?
 32. Can we declare an interface method as private?
 33. Explain covariant return types.
