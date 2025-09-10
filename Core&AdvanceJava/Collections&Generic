@@ -103,7 +103,7 @@ else in the application, it becomes eligible for garbage collection, and its ent
 20. Difference between PriorityQueue and ArrayDeque.
 -> PriorityQueue - A queue that orders its elements according to their natural ordering (Comparable) or by a custom
    Comparator provided at creation.Elements are arranged based on priority. The head of the queue is the least element
-   (min-heap by default). Null elements are not allowed, whereas duplicates are Allowed.
+   (min-heap by default). Null elements are not allowed, whereas duplicates are allowed.
    Use Case: When you need to process elements based on priority (e.g., task scheduling, Dijkstra’s algorithm).
    ArrayDeque - A resizable array-based implementation of a double-ended queue (Deque). FIFO (Queue) or LIFO (Stack)
    depending on how you use it. Null elements are not allowed, whereas duplicates are Allowed.
