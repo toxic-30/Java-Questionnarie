@@ -1,9 +1,17 @@
 1. What are the new features introduced in Java 8?
 ->
+
 2. What is a lambda expression?
-->
+-> Lambda expression is a way to implement functional interface other then implements and anonymous class.
+
 3. Syntax of lambda expression in Java?
+-> (parameter_list) -> { body }
+   An example is available in code snippet.
+
 4. Difference between lambda expression and anonymous class.
+-> Lambda expression is only used for functional interface. It is short and concise, lightweight, cleaner than other 2 methods.
+   Anonymous class can be used to override any method, extend abstract/concrete class. It contains lots of boilerplate, slightly
+   heavier and generally not recommended to use with lambda expression.
 
 5. What is a functional interface?
 -> A interface is functional interface when it have only 1 abstract method, it can have default and static both.
@@ -19,9 +27,12 @@
 -> @FunctionalInterface annotation marks an interface as a functional interface
 
 8. Explain Predicate<T> functional interface.
+-> Predicate<T> is a default type of functional interface used when you want to return boolean output.
+
 9. Explain Function<T, R> functional interface.
 10. Explain Supplier<T> functional interface.
 11. Explain Consumer<T> functional interface.
+->
 12. What is the difference between Predicate and Function?
 12. What is method reference in Java 8?
 13. Types of method references in Java 8.
