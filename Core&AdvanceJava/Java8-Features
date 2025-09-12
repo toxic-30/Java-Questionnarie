@@ -27,20 +27,40 @@
 -> @FunctionalInterface annotation marks an interface as a functional interface
 
 8. Explain Predicate<T> functional interface.
--> Predicate<T> is a default type of functional interface used when you want to return boolean output.
+-> Predicate<T> is a default type of functional interface, that takes one argument and return boolean output.
 
 9. Explain Function<T, R> functional interface.
+-> Function<T, R> is a functional interface that takes one argument of type T and returns a result of type R.
+
 10. Explain Supplier<T> functional interface.
+-> Supplier<T>, it takes no input but return a result of type T.
+
 11. Explain Consumer<T> functional interface.
-->
+->  Consumer<T> represents an operation that takes a single input argument and returns no result.
+
 12. What is the difference between Predicate and Function?
+-> Predicate<T> → return type is fixed to boolean.
+   Function<T, R> → return type is generic (any type R, including Boolean if you want).
+
 12. What is method reference in Java 8?
+->  Method reference is a declarative way of invoking method and constructor. It;s a short hand expression for replacing
+    lambda expression were the method to be invoked is very obvious.
+
 13. Types of method references in Java 8.
+-> Static Method -> ClassName::staticMethod
+   Instance Method with the help of Object, where we invoke method ref with the help object of class -> objRef::method
+   Instance Method with the help of class name, where we invoke method ref with the help of class -> ClassName::method
+   Constructor Reference -> ClassName::new
+
 14. Difference between static method reference and instance method reference.
+->  Static method reference in this method is invoked using class name.
+    There are 2 kind of instance method reference, one can be invoked by object of the class, other by classname.
+
 15. What are streams in Java 8?
 16. Difference between intermediate and terminal operations in streams.
 17. What are short-circuiting operations in streams?
 18. Difference between map() and flatMap().
+->
 19. What is the difference between forEach() and forEachOrdered()?
 20. Difference between findFirst() and findAny().
 21. What is the difference between sequential streams and parallel streams?
@@ -52,6 +72,7 @@
 27. Can streams be reused once consumed?
 28. Difference between lazy evaluation and eager evaluation in streams.
 29. What is Optional in Java 8?
+->
 30. Why was Optional introduced in Java?
 31. Difference between Optional.of(), Optional.ofNullable(), and Optional.empty().
 32. What is orElse() vs orElseGet() in Optional?
