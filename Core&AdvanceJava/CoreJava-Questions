@@ -176,21 +176,68 @@
 
 31. What is the difference between abstract methods and default methods?
 32. Can we declare an interface method as private?
+->  Before Java 9 → No, only public and abstract were allowed.
+    From Java 9 onwards → Yes, private methods are allowed inside interfaces but only for internal code reuse
+    (not accessible outside).
+
 33. Explain covariant return types.
+->  Covariant return type means overridden methods can return a more specific type than the one defined in the parent class.
+
 34. Can you override a private method?
+->  No. Private methods are not visible outside the class, hence cannot be overridden. If you declare the same method
+    in the subclass, it’s method hiding, not overriding.
+
 35. What is a transient variable in Java?
+->  transient keyword marks a variable to be skipped during serialization. When an object is deserialized, transient
+    fields are reset to default values.
+
 36. Difference between volatile and transient keywords.
+->  volatile: Ensures visibility of changes to a variable across threads. Used in multithreading. Variable is not cached;
+    always read from main memory.
+    transient: Related to serialization. Prevents a variable from being persisted when an object is serialized.
+
 37. What is the use of strictfp keyword?
+->  strictfp (strict floating point) ensures that floating-point calculations are consistent across all platforms.
+    Without it, different hardware/OS may give slightly different results. Can be applied to class, method, or interface.
+
 38. Explain the lifecycle of an object in Java.
+->  Creation → using new or via reflection, cloning, deserialization.
+    In use → object is referenced and accessible.
+    Unreachable → no references exist to the object.
+    Garbage Collection → JVM identifies unreachable objects.
+    Finalization (optional) → finalize() may be called before removal.
+    Destruction → object memory reclaimed.
+
 39. Can constructors be synchronized?
+->  No. Synchronizing constructors doesn’t make sense because when a constructor runs, the object is not fully created
+    yet, so no other thread can access it. However, you can synchronize the code inside the constructor block.
+
 40. What is object cloning in Java?
+-> Object cloning means creating a duplicate object with the same state as the original. Done using clone() method of
+   Object class. Class must implement Cloneable interface, else CloneNotSupportedException is thrown.
+
 41. How do you prevent object cloning?
 42. Difference between deep copy and shallow copy in cloning.
 43. What is an inner class? Types of inner classes.
+->  An inner class is a class defined inside another class. Types:
+    Non-static inner class (regular inner class) - Has access to outer class’s instance members.
+    Static nested class - Declared static; cannot access outer class’s instance variables directly.
+    Local inner class - Defined inside a block (e.g., method, loop).
+    Anonymous inner class - Class without a name, used for instantiating objects with modifications quickly.
+
 44. Difference between static nested class and inner class.
+
 45. Can we define an interface inside a class?
+->  Yes, an interface can be declared inside a class or another interface.
+
 46. Explain local inner classes.
+-> Local inner class - Defined inside a block (e.g., method, loop). Scope is limited to the block where it’s defined.
+   Cannot be declared with access modifiers (public, protected, private) because its visibility is already local to the block.
+   Can access: ll members (fields/methods) of the outer class. Final or effectively final local variables of the enclosing block
+   Useful for helper classes that are not reused elsewhere.
+
 47. What is an anonymous inner class?
+->  Anonymous inner class - Class without a name, used for instantiating objects with modifications quickly.
 48. What is a functional interface?
 49. Difference between checked and unchecked exceptions.
 50. Can we catch multiple exceptions in a single catch block?
