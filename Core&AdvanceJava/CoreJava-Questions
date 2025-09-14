@@ -218,6 +218,7 @@
 
 41. How do you prevent object cloning?
 42. Difference between deep copy and shallow copy in cloning.
+
 43. What is an inner class? Types of inner classes.
 ->  An inner class is a class defined inside another class. Types:
     Non-static inner class (regular inner class) - Has access to outer class’s instance members.
@@ -226,6 +227,12 @@
     Anonymous inner class - Class without a name, used for instantiating objects with modifications quickly.
 
 44. Difference between static nested class and inner class.
+->  | Aspect       | Static Nested Class**                         | Inner (Non-static) Class**
+    | -------------| ----------------------------------------------| ------------------------------------------------------------
+    | Association  | Does not depend on outer object               | Requires an instance of outer class                          |
+    | Access       | Can only access static members of outer class | Can access both static and non-static members of outer class |
+    | Instantiation| `Outer.StaticNested obj = new Outer.StaticNested();`| `Outer.Inner obj = new Outer().new Inner();`                 |
+    | Memory*      | More memory efficient                              | Needs reference to outer class object                        |
 
 45. Can we define an interface inside a class?
 ->  Yes, an interface can be declared inside a class or another interface.
@@ -238,7 +245,11 @@
 
 47. What is an anonymous inner class?
 ->  Anonymous inner class - Class without a name, used for instantiating objects with modifications quickly.
+    It is declared and instantiated in a single expression using new.Usually used to override methods on the fly or
+    provide quick implementation of an interface or abstract class.
+
 48. What is a functional interface?
+->  
 49. Difference between checked and unchecked exceptions.
 50. Can we catch multiple exceptions in a single catch block?
 51. Difference between throw and throws.
