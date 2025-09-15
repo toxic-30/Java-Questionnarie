@@ -299,16 +299,59 @@
     }
 
 56. What happens if finally block has return statement?
-->  
+->  If a finally block contains a return statement, it overrides any return value or exception from the try or catch blocks.
+
 57. Can a constructor throw an exception?
+->  Yes, a constructor can throw both checked and unchecked exceptions. If a constructor throws a checked exception, it
+    must be declared using the throws clause.
+
 58. Difference between compile-time error and runtime error.
+->  Compile-time error: Detected by compiler before execution (e.g., syntax errors, type mismatch, missing semicolon).
+    Runtime error: Detected while the program is running (e.g., NullPointerException, ArrayIndexOutOfBoundsException).
+
 59. What is the default exception handler in Java?
+->  If an exception is not caught/handled in runtime, Java uses the default exception handler
+    (ThreadGroup.uncaughtException()) which:-
+    Prints the exception name and message.
+    Prints the stack trace.
+    Terminates the program (if it's the main thread).
+
 60. Explain NoClassDefFoundError vs ClassNotFoundException.
+->  NoClassDefFoundError: Occurs when a class was present at compile-time but missing at runtime. It’s an Error.
+    ClassNotFoundException: Thrown when an application tries to load a class at runtime using reflection (Class.forName())
+    but the class is not found. It’s a checked exception.
+
 61. Explain OutOfMemoryError and how to fix it.
+->  OutOfMemoryError: Raised when JVM cannot allocate memory for an object. Causes: Memory leaks, large object creation,
+    insufficient heap size.
+
+    How to Fix / Prevent OOME -
+    Increase memory limits (temporary solution)
+    Fix memory leaks - Use profilers (VisualVM, Eclipse MAT) to check what objects are not being garbage collected.
+    Use proper data structures - Example: don’t keep large ArrayList if you only need a few elements.
+    Clear unused references (list.clear(), set references to null if long-lived).
+    Limit thread creation - Use thread pools (ExecutorService) instead of creating new threads endlessly.
+    Tune GC - Use JVM GC options (-XX:+UseG1GC, etc.) for better memory management.
+
 62. Difference between checked exception and runtime exception.
-63. What is the difference between throw new Exception() and throw new RuntimeException()?
+->  Checked exception: Checked at compile time, must be declared or handled. Example: IOException, SQLException.
+    Runtime exception: Occurs at runtime, not checked by compiler. Example: NullPointerException, ArithmeticException.
+
+63. What is the difference between throw new Exception() and throw new RuntimeException()?'
+->  throw new Exception() → Checked exception → Must be declared with throws or handled in try-catch.
+    throw new RuntimeException() → Unchecked exception → No need for declaration, can propagate without handling.
+
 64. Can we create our own Error class?
+->  Yes, you can extend Error, but it is not recommended.
+    Errors represent serious problems (like JVM crashes, memory issues) that applications shouldn’t try to handle.
+
 65. How does garbage collection work in Java?
+->  JVM automatically reclaims memory by collecting objects that are no longer reachable by any live thread or static
+    reference.
+    GC uses algorithms like Mark-and-Sweep, Generational GC.
+    Programmers can request GC via System.gc(), but JVM decides when to run it.
+    Finalization (finalize()) is called before object removal (deprecated in newer Java).
+
 66. What are different GC algorithms in Java?
 67. Difference between System.gc() and Runtime.gc().
 68. Can we force garbage collection in Java?
