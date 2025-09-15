@@ -175,6 +175,8 @@
     the diamond problem associated with class inheritance
 
 31. What is the difference between abstract methods and default methods?
+->
+
 32. Can we declare an interface method as private?
 ->  Before Java 9 → No, only public and abstract were allowed.
     From Java 9 onwards → Yes, private methods are allowed inside interfaces but only for internal code reuse
@@ -249,16 +251,55 @@
     provide quick implementation of an interface or abstract class.
 
 48. What is a functional interface?
-->  
+->  A interface is functional interface when it have only 1 abstract method, it can have default and static both.
+    but the abstract method should be one and only.
+
 49. Difference between checked and unchecked exceptions.
+->  Checked Exceptions - Exceptions that the compiler forces you to either handle with a try-catch block or declare with
+    a throws keyword in the method signature.
+    Unchecked Exceptions - Exceptions that the compiler does not force you to handle. They usually occur due to
+    programming mistakes.
+
 50. Can we catch multiple exceptions in a single catch block?
+->  Yes, we can catch multiple exceptions in a single catch block using multi catch feature.
+
 51. Difference between throw and throws.
+->  throw-> Used to actually throw an exception. Placed inside method or block. Can throw only one exception at a time
+    Followed by an exception object
+    throws -> Used to declare exceptions a method might throw. In method signature. Can declare multiple exceptions.
+    Followed by exception class names
+
 52. What is try-with-resources in Java?
+->  A special try statement that automatically closes resources (like files, DB connections, sockets, etc.) once the
+    block finishes — no need for explicit finally.
+    Syntax -
+    try (ResourceType res = new ResourceType()) {
+        // use resource
+    } catch (Exception e) {
+        // handle exception
+    }
+
 53. Can we write multiple finally blocks?
+-> No for single try-catch, only 1 finally block is allowed.
+
 53. Difference between error and exception.
+->
 54. Can we rethrow an exception?
+->  Yes. A caught exception can be rethrown using the throw keyword. Useful when you want to log/handle partially and
+    then pass it to the caller.
+
 55. Explain custom exceptions in Java.
+->  Custom exceptions are user-defined exceptions by extending Exception (checked) or RuntimeException (unchecked). Used
+    when built-in exceptions don’t describe the error clearly.
+    Syntax -
+    class InvalidAgeException extends Exception {
+        public InvalidAgeException(String msg) {
+            super(msg);
+        }
+    }
+
 56. What happens if finally block has return statement?
+->  
 57. Can a constructor throw an exception?
 58. Difference between compile-time error and runtime error.
 59. What is the default exception handler in Java?
